@@ -27,8 +27,9 @@ Use esta tabela para itens importantes marcados como `[H]` ou `[?]`. Preserve o 
 
 | ID | Afirmação / dúvida inicial | Tipo | Por que importa | Como/onde investigar | Evidência obtida | Estado atual | Impacto no projeto |
 |---|---|---|---|---|---|---|---|
-| H01 | {{...}} | H / ? | {{...}} | Entrega 2 / 3 / 7 / outra | {{link/fonte ou PENDENTE}} | aberta / sustentada / refutada / refinada | {{...}} |
-| H02 | {{...}} | H / ? | {{...}} | {{...}} | {{...}} | aberta | {{...}} |
+| H01 | Médicos compreenderão e considerarão útil uma explicação do resultado do modelo apresentada junto à imagem | H | A aceitação depende da compreensão e da confiança na indicação | Entrega 3 / 7 | PENDENTE — investigar com médicos | aberta | Pode orientar a forma de apresentar explicações e detalhes técnicos |
+| H02 | O fluxo de upload, processamento e resultado representa uma atividade real e relevante no contexto profissional | H | Define o recorte de IHC e evita criar telas sem tarefa correspondente | Entrega 3 / 4 / 5 | PENDENTE — investigar com médicos | aberta | Pode confirmar ou alterar o fluxo priorizado |
+| H03 | O médico distinguirá claramente a indicação do modelo do diagnóstico final | H | Um erro de interpretação pode produzir consequência clínica relevante | Entrega 4 / 7 / 8 | PENDENTE — investigar com médicos | aberta | Exige comunicação clara das limitações e da responsabilidade profissional |
 
 ## 3. Rastreabilidade entre contribuição técnica, necessidades e artefatos
 
