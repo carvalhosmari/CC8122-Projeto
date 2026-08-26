@@ -1,7 +1,7 @@
 # Entrega 1 — Conhecendo o projeto, o usuário e o problema
 
-**Data:** {{dd/mm/aaaa}}  
-**Status:** ⬜ não iniciada  
+**Data:** 23/08/2026  
+**Status:** 🟨 em andamento  
 **Responsabilidade:** 1 solução consolidada por equipe
 
 ## Objetivo da atividade
@@ -59,15 +59,15 @@ Uma hipótese explicitada é melhor do que uma suposição escondida.
 
 | Nome completo | Matrícula | GitHub |
 |---|---:|---|
-| {{...}} | {{...}} | {{...}} |
+| Mariane S. Carvalho | 22.123.105-3 | [github.com/carvalhosmari](https://github.com/carvalhosmari)  |
 
 ## 0.2 Título atual do TCC
 
-{{...}}
+Detecção de patologias renais em tomografia computadorizada por meio de redes convolucionais de baixo custo computacional.
 
 ## 0.3 Orientador(a)
 
-{{...}}
+Leila Cristina Carneiro Bergamasco
 
 ## 0.4 Qual é o resultado principal atualmente previsto no TCC?
 
@@ -75,7 +75,7 @@ Marque e descreva:
 
 - [ ] sistema/aplicação interativa;
 - [ ] algoritmo;
-- [ ] modelo de IA/ML/LLM;
+- [x] modelo de IA/ML/LLM;
 - [ ] biblioteca/API/framework;
 - [ ] análise de dataset;
 - [ ] estudo/benchmark/avaliação experimental;
@@ -83,15 +83,15 @@ Marque e descreva:
 - [ ] componente embarcado/IoT;
 - [ ] outro: {{...}}.
 
-**Descrição:** {{...}}
+**Descrição:** Classificação de imagens médicas renais, considerando não apenas o desempenho diagnóstico, mas também a eficiência computacional e a interpretabilidade do modelo utilizado, visando contribuir para o desenvolvimento de sistemas inteligentes mais acessíveis e aplicáveis na prática clínica.
 
 ## 0.5 O TCC já previa desenvolvimento de interface com usuário?
 
-- [ ] Sim, a interface já faz parte do TCC.
+- [x] Sim, a interface já faz parte do TCC.
 - [ ] Parcialmente; existe alguma interação, mas ainda não está bem definida.
 - [ ] Não. O TCC é predominantemente técnico e não previa interface.
 
-**Explique o que está formalmente previsto no TCC:** {{...}}
+**Explique o que está formalmente previsto no TCC:** Um sistema para auxílio do diagnóstico de patologias renais a partir do processamento de tomografias computadorizadas, que, além de ser assertivo, também deve ser explicável e, principalmente, de baixo custo para viabilizar a aplicabilidade clínica em órgãos do SUS.
 
 > Esta resposta serve para separar o compromisso do TCC do projeto da disciplina. Mesmo quando a opção for **não**, a equipe irá definir uma interface para exercitar IHC.
 
@@ -101,11 +101,11 @@ Marque e descreva:
 
 ## 1.1 Explique o TCC em uma frase, sem citar linguagem de programação, framework ou banco de dados.
 
-{{...}}
+Um sistema para auxílio do diagnóstico de patologias renais a partir do processamento de tomografias computadorizadas
 
 ## 1.2 Qual situação, atividade ou problema do mundo real motivou o TCC?
 
-{{[F/H/?] ...}}
+[F] 
 
 ## 1.3 Qual é a **capacidade/contribuição central** produzida pelo TCC?
 
@@ -115,11 +115,13 @@ Complete, se ajudar:
 
 Exemplos: otimizar consultas; classificar imagens; detectar anomalias; comparar modelos; identificar padrões; prever demanda; analisar desempenho; gerar resumos; recomendar configurações.
 
-{{...}}
+O TCC melhora a aplicabilidade clínica, uma vez que tarefas de processamento de imagens normalmente demandam alto poder computacional, e também possui interpretabilidade, fundamental para garantir a confiabilidade do modelo proposto, viabilizando o seu uso.
 
 ## 1.4 O que se espera que esteja diferente **para pessoas, organizações ou processos** se essa contribuição for bem-sucedida?
 
-{{[F/H/?] ...}}
+[F] Que a solução seja acessível;
+[F] Que patologias renais, normalmente diagnosticadas em estágios avançados, possam ter o diagnóstico antecipado.
+ 
 
 ## 1.5 O que é mérito técnico/científico do TCC e o que seria uma possível aplicação prática?
 
@@ -135,7 +137,7 @@ Exemplos: otimizar consultas; classificar imagens; detectar anomalias; comparar 
 
 Se não houver interface prevista no TCC, escreva `NÃO SE APLICA AO ESCOPO ORIGINAL` e prossiga para 2.2.
 
-{{[F/H/?] ...}}
+[F] Médicos
 
 ## 2.2 Quem poderia **usar, configurar, administrar, operar, interpretar ou tomar decisões** a partir da contribuição técnica?
 
@@ -149,7 +151,7 @@ Considere perfis profissionais e stakeholders, não apenas consumidores finais.
 
 | Stakeholder | Como é afetado | Usa interface? | Status/evidência |
 |---|---|---|---|
-| {{...}} | {{...}} | sim/não | {{...}} |
+| Paciente | Exames de imagem avaliado | não | {{...}} |
 
 ## 2.4 Que características desses perfis podem influenciar a interação?
 
@@ -165,7 +167,7 @@ Considere conhecimento do domínio, experiência tecnológica, frequência de us
 
 Não responda “usar o algoritmo”, “clicar no sistema” ou “ver o dashboard”.
 
-{{[F/H/?] ...}}
+[F] Obter auxílio diagnóstico de patologias renais em estágios iniciais, uma vez que os danos causados na estrutura dos rins nesses estágios normalmente não são visíveis a olho nu.
 
 ## 3.2 Quais são as atividades mais importantes?
 
@@ -181,7 +183,7 @@ Não responda “usar o algoritmo”, “clicar no sistema” ou “ver o dashbo
 
 ## 3.4 Qual parece mais crítica? Que consequência existe se for mal executada?
 
-{{[F/H/?] ...}}
+[H] Analisar resultado, pois 
 
 ---
 
@@ -191,19 +193,20 @@ Não responda “usar o algoritmo”, “clicar no sistema” ou “ver o dashbo
 
 Pode existir software concorrente, linha de comando, planilha, notebook, script, painel técnico, processo manual, consulta a logs, análise visual, troca de mensagens, decisão por especialista etc.
 
-{{[F/H/?] ...}}
+[F] Processo manual;
+[F] Decisão por especialista.
 
 ## 4.2 O que é difícil, demorado, confuso, repetitivo, arriscado ou pouco transparente?
 
-{{[F/H/?] ...}}
+[H] Processo de análise das tomografias, uma vez que está suscetível a erros humanos.
 
 ## 4.3 Que informações o profissional precisa interpretar para tomar decisão?
 
-{{[F/H/?] ...}}
+[H] Se os rins estão com a estrutura preservada (contornos regulares)
 
 ## 4.4 O que acontece quando a atividade falha ou quando o resultado é interpretado incorretamente?
 
-{{[F/H/?] ...}}
+[F] Um diagnóstico pode ser dado incorretamente.
 
 ## 4.5 Conte uma situação concreta.
 
@@ -247,7 +250,7 @@ Considere papéis, chefias, equipes, permissões, aprovação, responsabilidade 
 
 ## 5.6 Um erro pode produzir consequência relevante? Qual?
 
-{{[F/H/?] ...}}
+[F] Sim, um diagnóstico incorreto.
 
 ---
 
@@ -269,7 +272,7 @@ Considere papéis, chefias, equipes, permissões, aprovação, responsabilidade 
 
 Exemplos possíveis: ferramentas de banco, IDEs, consoles de nuvem, dashboards, plataformas de dados, ferramentas de monitoramento, painéis de IA, sistemas administrativos.
 
-{{[F/H/?] ...}}
+[H] sistemas administrativos
 
 ## 6.4 O que essas soluções parecem fazer bem?
 
