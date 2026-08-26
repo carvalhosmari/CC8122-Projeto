@@ -17,32 +17,31 @@ Leia obrigatoriamente o [Guia para definir o escopo de IHC a partir do tema do T
 
 ## Identificação
 
-**Título do projeto de IHC:** {{TÍTULO DO PROJETO}}  
-**TCC/projeto de origem:** {{TÍTULO ORIGINAL DO TCC}}  
-**Orientador(a):** {{NOME}}  
+**Título do projeto de IHC:**   
+**TCC/projeto de origem:** Detecção de patologias renais em tomografia computadorizada por meio de redes convolucionais de baixo custo computacional.  
+**Orientador(a):** Leila Cristina Carneiro Bergamasco  
 **Disciplina:** Interação Humano-Computador  
-**Instituição:** {{INSTITUIÇÃO}}  
-**Semestre:** {{ANO/SEMESTRE}}
+**Instituição:** Fundação Educacional Inaciana Padre Sabóia de Medeiros - FEI
+**Semestre:** 2026/2º
 
 ### Equipe
 
 | Nome completo | Matrícula | GitHub | Responsabilidade principal |
 |---|---:|---|---|
-| {{Nome 1}} | {{matrícula}} | {{@usuario}} | {{...}} |
-| {{Nome 2}} | {{matrícula}} | {{@usuario}} | {{...}} |
+| Mariane S. Carvalho | 22.123.105-3 | [@carvalhosmari](https://github.com/carvalhosmari) | {{...}} |
 
 ## Relação entre TCC e projeto de IHC
 
 | Item | Descrição |
 |---|---|
-| Tema central do TCC | {{...}} |
-| Resultado técnico esperado do TCC | {{algoritmo, estudo, sistema, modelo, análise, API...}} |
-| O TCC já previa interface? | sim / não / parcialmente |
-| Capacidade técnica que pode gerar valor para pessoas | {{...}} |
-| Usuário principal adotado em IHC | {{...}} |
-| Objetivo principal desse usuário | {{...}} |
-| Interface/recorte explorado na disciplina | {{...}} |
-| Relação com o escopo formal do TCC | parte prevista / extensão conceitual / protótipo demonstrativo / outra |
+| Tema central do TCC | processamento de imagens médicas utilizando redes neurais convolucionais |
+| Resultado técnico esperado do TCC | modelo |
+| O TCC já previa interface? | sim 
+| Capacidade técnica que pode gerar valor para pessoas | detecção de patologias renais a partir do processamento de imagens |
+| Usuário principal adotado em IHC | médico |
+| Objetivo principal desse usuário | avaliar/analisar tomografias computadorizadas |
+| Interface/recorte explorado na disciplina | carregamento de imagens |
+| Relação com o escopo formal do TCC | parte prevista |
 
 > **Importante:** a tabela acima explica a relação entre os dois trabalhos. Ela não altera o compromisso formal do TCC.
 
