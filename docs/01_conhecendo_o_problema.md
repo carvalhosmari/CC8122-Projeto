@@ -105,7 +105,7 @@ Um sistema para auxílio do diagnóstico de patologias renais a partir do proces
 
 ## 1.2 Qual situação, atividade ou problema do mundo real motivou o TCC?
 
-[F] 
+[F] Entes próximos que foram acometidas por Doença Renal Crônica (DRC).
 
 ## 1.3 Qual é a **capacidade/contribuição central** produzida pelo TCC?
 
