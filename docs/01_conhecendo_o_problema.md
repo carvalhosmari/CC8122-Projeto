@@ -1,7 +1,7 @@
 # Entrega 1 — Conhecendo o projeto, o usuário e o problema
 
-**Data:** {{dd/mm/aaaa}}  
-**Status:** ⬜ não iniciada  
+**Data:** 23/08/2026  
+**Status:** 🟩 concluída  
 **Responsabilidade:** 1 solução consolidada por equipe
 
 ## Objetivo da atividade
@@ -59,15 +59,15 @@ Uma hipótese explicitada é melhor do que uma suposição escondida.
 
 | Nome completo | Matrícula | GitHub |
 |---|---:|---|
-| {{...}} | {{...}} | {{...}} |
+| Mariane S. Carvalho | 22.123.105-3 | [github.com/carvalhosmari](https://github.com/carvalhosmari)  |
 
 ## 0.2 Título atual do TCC
 
-{{...}}
+Detecção de patologias renais em tomografia computadorizada por meio de redes convolucionais de baixo custo computacional.
 
 ## 0.3 Orientador(a)
 
-{{...}}
+Leila Cristina Carneiro Bergamasco
 
 ## 0.4 Qual é o resultado principal atualmente previsto no TCC?
 
@@ -75,7 +75,7 @@ Marque e descreva:
 
 - [ ] sistema/aplicação interativa;
 - [ ] algoritmo;
-- [ ] modelo de IA/ML/LLM;
+- [x] modelo de IA/ML/LLM;
 - [ ] biblioteca/API/framework;
 - [ ] análise de dataset;
 - [ ] estudo/benchmark/avaliação experimental;
@@ -83,15 +83,15 @@ Marque e descreva:
 - [ ] componente embarcado/IoT;
 - [ ] outro: {{...}}.
 
-**Descrição:** {{...}}
+**Descrição:** Classificação de imagens médicas renais, considerando não apenas o desempenho diagnóstico, mas também a eficiência computacional e a interpretabilidade do modelo utilizado, visando contribuir para o desenvolvimento de sistemas inteligentes mais acessíveis e aplicáveis na prática clínica.
 
 ## 0.5 O TCC já previa desenvolvimento de interface com usuário?
 
-- [ ] Sim, a interface já faz parte do TCC.
+- [x] Sim, a interface já faz parte do TCC.
 - [ ] Parcialmente; existe alguma interação, mas ainda não está bem definida.
 - [ ] Não. O TCC é predominantemente técnico e não previa interface.
 
-**Explique o que está formalmente previsto no TCC:** {{...}}
+**Explique o que está formalmente previsto no TCC:** Um sistema para auxílio do diagnóstico de patologias renais a partir do processamento de tomografias computadorizadas, que, além de ser assertivo, também deve ser explicável e, principalmente, de baixo custo para viabilizar a aplicabilidade clínica em órgãos do SUS.
 
 > Esta resposta serve para separar o compromisso do TCC do projeto da disciplina. Mesmo quando a opção for **não**, a equipe irá definir uma interface para exercitar IHC.
 
@@ -101,11 +101,11 @@ Marque e descreva:
 
 ## 1.1 Explique o TCC em uma frase, sem citar linguagem de programação, framework ou banco de dados.
 
-{{...}}
+Um sistema para auxílio do diagnóstico de patologias renais a partir do processamento de tomografias computadorizadas
 
 ## 1.2 Qual situação, atividade ou problema do mundo real motivou o TCC?
 
-{{[F/H/?] ...}}
+[F] 
 
 ## 1.3 Qual é a **capacidade/contribuição central** produzida pelo TCC?
 
@@ -115,17 +115,19 @@ Complete, se ajudar:
 
 Exemplos: otimizar consultas; classificar imagens; detectar anomalias; comparar modelos; identificar padrões; prever demanda; analisar desempenho; gerar resumos; recomendar configurações.
 
-{{...}}
+O TCC melhora a aplicabilidade clínica, uma vez que tarefas de processamento de imagens normalmente demandam alto poder computacional, e também possui interpretabilidade, fundamental para garantir a confiabilidade do modelo proposto, viabilizando o seu uso.
 
 ## 1.4 O que se espera que esteja diferente **para pessoas, organizações ou processos** se essa contribuição for bem-sucedida?
 
-{{[F/H/?] ...}}
+[F] Que a solução seja acessível;
+[F] Que patologias renais, normalmente diagnosticadas em estágios avançados, possam ter o diagnóstico antecipado.
+ 
 
 ## 1.5 O que é mérito técnico/científico do TCC e o que seria uma possível aplicação prática?
 
 | Mérito/contribuição técnica | Possível aplicação/valor em uso |
 |---|---|
-| {{...}} | {{...}} |
+| Classificação de imagens médicas renais com redes convolucionais de baixo custo computacional e análise de interpretabilidade | Apoiar médicos na análise de tomografias computadorizadas, oferecendo uma indicação complementar para a avaliação de possíveis patologias renais. |
 
 ---
 
@@ -135,7 +137,7 @@ Exemplos: otimizar consultas; classificar imagens; detectar anomalias; comparar 
 
 Se não houver interface prevista no TCC, escreva `NÃO SE APLICA AO ESCOPO ORIGINAL` e prossiga para 2.2.
 
-{{[F/H/?] ...}}
+[F] Médicos
 
 ## 2.2 Quem poderia **usar, configurar, administrar, operar, interpretar ou tomar decisões** a partir da contribuição técnica?
 
@@ -143,19 +145,25 @@ Considere perfis profissionais e stakeholders, não apenas consumidores finais.
 
 | Perfil | Relação com a contribuição | O que faria | Status/evidência |
 |---|---|---|---|
-| {{DBA / analista / gestor / técnico / pesquisador / usuário final...}} | {{...}} | {{...}} | F / H / ? |
+| Médico radiologista ou especialista responsável pelo diagnóstico | Usuário direto e intérprete do resultado | Carregaria a tomografia, analisaria a indicação do modelo e a explicação associada, usando essas informações como apoio à decisão clínica | [H] - perfil a confirmar com profissionais |
+| Pesquisador ou profissional de IA/ML | Responsável técnico pela avaliação do modelo | Configuraria versões do modelo, parâmetros e conjuntos de avaliação | [H] - cenário de adoção |
+| Profissional de TI ou administrador do serviço | Operação e manutenção da solução | Administraria acesso, disponibilidade e integração com o fluxo institucional | [H] - cenário de adoção |
 
 ## 2.3 Existem pessoas afetadas que não usariam a interface diretamente?
 
 | Stakeholder | Como é afetado | Usa interface? | Status/evidência |
 |---|---|---|---|
-| {{...}} | {{...}} | sim/não | {{...}} |
+| Paciente | Exames de imagem avaliados | não | [H] - impacto depende da adoção clínica da solução |
 
 ## 2.4 Que características desses perfis podem influenciar a interação?
 
 Considere conhecimento do domínio, experiência tecnológica, frequência de uso, necessidades de acessibilidade, responsabilidade profissional, familiaridade com métricas, linguagem técnica, urgência etc.
 
-{{[F/H/?] ...}}
+[H] H01 - O médico terá familiaridade com sistemas de visualização de exames, mas poderá não conhecer métricas de aprendizado de máquina; portanto, a interface deverá apresentar o resultado em linguagem clínica compreensível e permitir consultar detalhes técnicos quando necessário.
+
+[H] H02 - O uso ocorrerá em um contexto profissional com responsabilidade sobre a decisão clínica, exigindo distinção clara entre a indicação do modelo e o diagnóstico final do médico.
+
+[?] Ainda não se sabe a frequência de uso, o nível de experiência tecnológica dos profissionais, os requisitos de acessibilidade e quais termos clínicos são preferidos.
 
 ---
 
@@ -165,23 +173,23 @@ Considere conhecimento do domínio, experiência tecnológica, frequência de us
 
 Não responda “usar o algoritmo”, “clicar no sistema” ou “ver o dashboard”.
 
-{{[F/H/?] ...}}
+[F] Obter auxílio diagnóstico de patologias renais em estágios iniciais, uma vez que os danos causados na estrutura dos rins nesses estágios normalmente não são visíveis a olho nu.
 
 ## 3.2 Quais são as atividades mais importantes?
 
 | ID | Atividade/objetivo | Quem realiza | Frequência/criticidade inicial | Status/evidência |
 |---|---|---|---|---|
-| A01 | {{...}} | {{...}} | {{...}} | {{...}} |
-| A02 | {{...}} | {{...}} | {{...}} | {{...}} |
-| A03 | {{...}} | {{...}} | {{...}} | {{...}} |
+| A01 | Selecionar e carregar uma tomografia computadorizada renal válida | Médico ou técnico autorizado | Frequente; depende do volume de exames | [H] - fluxo proposto a validar |
+| A02 | Consultar a classificação e a indicação de possível patologia | Médico | Frequente e alta criticidade | [H] - objetivo de uso a validar |
+| A03 | Interpretar a explicação do modelo e decidir como prosseguir com a avaliação clínica | Médico | Frequente e alta criticidade | [H] - objetivo de uso a validar |
 
 ## 3.3 Qual atividade parece mais frequente? Por quê?
 
-{{[F/H/?] ...}}
+[H] A seleção e o carregamento de exames tende a ser a atividade mais recorrente, pois inicia cada análise; 
 
 ## 3.4 Qual parece mais crítica? Que consequência existe se for mal executada?
 
-{{[F/H/?] ...}}
+[H] Analisar e interpretar o resultado parece ser a atividade mais crítica, pois uma compreensão incorreta da indicação do modelo pode contribuir para uma decisão clínica inadequada. A consequência exata e os mecanismos de revisão precisam ser investigados.
 
 ---
 
@@ -191,31 +199,33 @@ Não responda “usar o algoritmo”, “clicar no sistema” ou “ver o dashbo
 
 Pode existir software concorrente, linha de comando, planilha, notebook, script, painel técnico, processo manual, consulta a logs, análise visual, troca de mensagens, decisão por especialista etc.
 
-{{[F/H/?] ...}}
+[F] Processo manual;
+[F] Decisão por especialista.
 
 ## 4.2 O que é difícil, demorado, confuso, repetitivo, arriscado ou pouco transparente?
 
-{{[F/H/?] ...}}
+[H] Processo de análise das tomografias, uma vez que está suscetível a erros humanos.
 
 ## 4.3 Que informações o profissional precisa interpretar para tomar decisão?
 
-{{[F/H/?] ...}}
+[H] Se os rins estão com a estrutura preservada (contornos regulares)
 
 ## 4.4 O que acontece quando a atividade falha ou quando o resultado é interpretado incorretamente?
 
-{{[F/H/?] ...}}
+[F] Um diagnóstico pode ser dado incorretamente.
 
 ## 4.5 Conte uma situação concreta.
 
 Escreva uma pequena narrativa com pessoa, objetivo, atividade, contexto, dificuldade e consequência. **Não descreva ainda a futura solução.**
 
-{{[F/H/?] narrativa...}}
+[H] H03 - Um médico recebe uma tomografia computadorizada durante sua rotina de atendimento e precisa avaliar se há sinais compatíveis com uma patologia. Ele observa as imagens e os contornos dos rins, mas trabalha sob pressão de tempo e pode ter dificuldade para identificar alterações sutis. Se a análise for incompleta ou o resultado for interpretado incorretamente, uma suspeita pode não ser investigada ou um diagnóstico pode ser feito de forma inadequada. A situação e suas condições reais ainda precisam ser confirmadas com profissionais.
 
 ## 4.6 Que evidência existe hoje?
 
 | Evidência/fonte | O que sustenta | Limitação |
 |---|---|---|
-| {{...}} | {{...}} | {{...}} |
+| Descrição do TCC e informações fornecidas | O TCC pretende classificar imagens renais, com eficiência computacional e interpretabilidade | Ainda não constitui evidência de uso clínico ou de desempenho em ambiente real |
+| Entrevistas ou testes com médicos | PENDENTE - poderão sustentar necessidades e fluxos reais | Ainda não realizados |
 
 ---
 
@@ -223,31 +233,33 @@ Escreva uma pequena narrativa com pessoa, objetivo, atividade, contexto, dificul
 
 ## 5.1 Onde e em quais situações a interação poderia ocorrer?
 
-{{[F/H/?] ...}}
+[H] O uso poderá ocorrer em hospitais, clínicas, laboratórios ou instituições de pesquisa, durante a avaliação de exames de pacientes. O contexto institucional exato ainda não foi definido.
 
 ## 5.2 Em quais dispositivos/equipamentos?
 
-{{[F/H/?] ...}}
+[H] A interação poderá ocorrer em um computador de trabalho com monitor adequado para visualização de imagens médicas, por meio de uma interface web ou desktop. O dispositivo e a integração com sistemas de imagem ainda precisam ser definidos.
 
 ## 5.3 Existem condições físicas relevantes?
 
 Considere iluminação, ruído, mobilidade, conexão, privacidade, uso compartilhado, interrupções, pressão de tempo etc.
 
-{{[F/H/?] ...}}
+[H] O profissional poderá enfrentar interrupções, pressão de tempo, uso compartilhado do equipamento e necessidade de preservar a privacidade dos exames. 
+
+[F] Imagens médicas são dados sensíveis no contexto da LGPD; os requisitos institucionais e técnicos de proteção ainda precisam ser detalhados.
 
 ## 5.4 Existem fatores sociais ou organizacionais?
 
 Considere papéis, chefias, equipes, permissões, aprovação, responsabilidade profissional, auditoria, turnos e colaboração.
 
-{{[F/H/?] ...}}
+[H] A decisão permanece sob responsabilidade do profissional de saúde, podendo envolver colaboração entre radiologistas, médicos solicitantes, técnicos e equipe de TI. Permissões, aprovação, integração com o fluxo institucional e responsabilidades ainda são desconhecidas.
 
 ## 5.5 Existe necessidade de histórico, rastreabilidade ou auditoria?
 
-{{[F/H/?] ...}}
+[?] Ainda não foi definido se o protótipo precisará manter histórico de exames, registrar versões do modelo, permitir auditoria ou exportar evidências. Esses requisitos são relevantes para investigar antes de qualquer implementação.
 
 ## 5.6 Um erro pode produzir consequência relevante? Qual?
 
-{{[F/H/?] ...}}
+[F] Sim, um diagnóstico incorreto.
 
 ---
 
@@ -259,29 +271,32 @@ Considere papéis, chefias, equipes, permissões, aprovação, responsabilidade 
 
 | Alternativa atual | Quem usa | Para quê | Status/evidência |
 |---|---|---|---|
-| {{...}} | {{...}} | {{...}} | {{...}} |
+| Avaliação visual e interpretação por profissional de saúde | Médico | Analisar as imagens e elaborar uma conclusão diagnóstica | [F] - processo tradicional |
+| Sistemas de visualização e gestão de exames médicos | Médicos e equipes de saúde | Consultar, organizar e visualizar exames | [H] - alternativa e vocabulário a investigar |
+
 
 ## 6.2 Existem produtos que atuam na mesma área, mesmo sem serem equivalentes ao TCC?
 
-{{[F/H/?] ...}}
+[?] O levantamento inicial de concorrentes, produtos específicos, critérios de comparação e disponibilidade no contexto do SUS ainda não foi realizado. 
 
 ## 6.3 Quais interfaces profissionais esse público já conhece?
 
 Exemplos possíveis: ferramentas de banco, IDEs, consoles de nuvem, dashboards, plataformas de dados, ferramentas de monitoramento, painéis de IA, sistemas administrativos.
 
-{{[F/H/?] ...}}
+[H] sistemas administrativos;
+[H] sistemas médicos.
 
 ## 6.4 O que essas soluções parecem fazer bem?
 
-{{[F/H/?] ...}}
+[H] Sistemas médicos provavelmente oferecem visualização de imagens, identificação do paciente/exame e organização do fluxo de trabalho. 
 
 ## 6.5 O que parecem fazer mal, dificultar ou não atender?
 
-{{[F/H/?] ...}}
+[H] Soluções existentes podem dificultar a compreensão de recomendações automatizadas, a visualização da justificativa do resultado ou a distinção entre apoio computacional e diagnóstico profissional. 
 
 ## 6.6 Que padrões de interface ou vocabulário parecem familiares a esse público?
 
-{{[F/H/?] ...}}
+[H] Termos como paciente, exame, tomografia, imagem, achado, suspeita, resultado, confiança e histórico podem ser familiares, mas o vocabulário deve ser validado com médicos. 
 
 ---
 
@@ -293,7 +308,7 @@ Exemplos possíveis: ferramentas de banco, IDEs, consoles de nuvem, dashboards, 
 
 Explique qual parte da interface será usada como recorte da disciplina e por que esse fluxo é relevante.
 
-{{...}}
+O carregamento das tomografias computadorizadas e análise dos resultados gerados pelo modelo.
 
 ### Caminho B — TCC não possui interface prevista
 
@@ -314,25 +329,23 @@ Responda:
 
 ## 7.2 Qual perfil será priorizado no projeto de IHC?
 
-{{...}}
-
 **Por que esse perfil foi escolhido?** {{...}}
 
 ## 7.3 Qual objetivo desse usuário será priorizado?
 
-{{...}}
+Interpretar a indicação produzida pelo modelo em conjunto com a tomografia, compreender seus limites e decidir como prosseguir com a investigação clínica.
 
 ## 7.4 Que interface será explorada na disciplina?
 
 Complete:
 
-> **Para fins da disciplina de IHC, será projetada uma interface que permita a `{{perfil}}` utilizar `{{capacidade/resultado do TCC}}` para `{{objetivo}}`, no contexto de `{{situação}}`.**
+> **Para fins da disciplina de IHC, será projetada uma interface que permita a `médicos` utilizar a `classificação interpretável de tomografias renais produzida pelo modelo` para `analisar possíveis patologias e apoiar a decisão sobre a investigação do exame`, no contexto de `avaliação profissional de tomografias computadorizadas renais`.**
 
-{{...}}
+O recorte explorará o fluxo de entrada de uma tomografia, acompanhamento do processamento e leitura do resultado com sua explicação. A interface será tratada como parte prevista do sistema.
 
 ## 7.5 Qual é a relação dessa interface com o TCC?
 
-- [ ] Já fazia parte do TCC.
+- [x] Já fazia parte do TCC.
 - [ ] É um aprofundamento de algo parcialmente previsto.
 - [ ] É uma extensão conceitual criada para a disciplina.
 - [ ] É um protótipo demonstrativo de aplicação potencial.
@@ -350,20 +363,20 @@ Marque apenas as que parecem plausíveis e explique o objetivo correspondente.
 
 | Possibilidade | Pode fazer sentido? | Objetivo/tarefa que justificaria | Evidência atual |
 |---|---|---|---|
-| Dashboard/visão geral | sim/não/talvez | {{...}} | {{...}} |
-| Configuração/parametrização | sim/não/talvez | {{...}} | {{...}} |
-| Entrada/upload/seleção de dados | sim/não/talvez | {{...}} | {{...}} |
-| Acompanhamento de processamento | sim/não/talvez | {{...}} | {{...}} |
-| Relatório/resultados | sim/não/talvez | {{...}} | {{...}} |
-| Histórico com busca/filtros | sim/não/talvez | {{...}} | {{...}} |
-| Comparação de resultados | sim/não/talvez | {{...}} | {{...}} |
-| Explicabilidade/detalhamento | sim/não/talvez | {{...}} | {{...}} |
-| Administração/configurações globais | sim/não/talvez | {{...}} | {{...}} |
-| Usuários/perfis/permissões | sim/não/talvez | {{...}} | {{...}} |
-| CRUD de entidade do domínio | sim/não/talvez | {{...}} | {{...}} |
-| Auditoria/logs | sim/não/talvez | {{...}} | {{...}} |
-| Alertas/ocorrências | sim/não/talvez | {{...}} | {{...}} |
-| Ajuda/documentação | sim/não/talvez | {{...}} | {{...}} |
+| Dashboard/visão geral | talvez | Acompanhar exames recentes, estados de processamento e pendências | [H] - só se houver mais de um exame no fluxo |
+| Configuração/parametrização | talvez | Selecionar modelo ou parâmetros autorizados | ? - depende do perfil administrador |
+| Entrada/upload/seleção de dados | sim | Fornecer uma tomografia válida para análise | [H] - fluxo central do recorte |
+| Acompanhamento de processamento | sim | Saber se o exame foi recebido, processado ou apresentou erro | [H] - necessário para feedback do sistema |
+| Relatório/resultados | sim | Consultar a indicação do modelo e registrar uma conclusão de apoio | [H] - resultado central do TCC |
+| Histórico com busca/filtros | talvez | Localizar exames e análises anteriores | ? - necessidade ainda não confirmada |
+| Comparação de resultados | talvez | Comparar versões, exames ou resultados quando houver justificativa clínica | ? - fora do primeiro recorte até investigação |
+| Explicabilidade/detalhamento | sim | Compreender quais regiões ou características influenciaram a indicação | [H] - interpretabilidade é contribuição declarada |
+| Administração/configurações globais | talvez | Manter configurações operacionais do serviço | [H] - depende de adoção institucional |
+| Usuários/perfis/permissões | talvez | Restringir acesso a exames e funções conforme responsabilidade | [H] - relevante por privacidade e governança |
+| CRUD de entidade do domínio | não inicialmente | Não há entidade administrativa necessária no recorte atual | [F] - não deriva de uma tarefa já identificada |
+| Auditoria/logs | talvez | Rastrear processamento, versão do modelo e acesso aos resultados | [H] - relevância provável, ainda não validada |
+| Alertas/ocorrências | talvez | Informar falhas, resultado inconclusivo ou necessidade de revisão | [H] - depende dos modos de falha confirmados |
+| Ajuda/documentação | sim | Explicar termos, limitações e interpretação responsável do resultado | [H] - necessário para reduzir ambiguidades |
 
 > **Atenção:** “login + dashboard + CRUD” não é uma solução universal. Cada padrão deve surgir de uma tarefa real.
 
@@ -375,13 +388,16 @@ Marque apenas as que parecem plausíveis e explique o objetivo correspondente.
 
 | Benefício esperado | Problema/necessidade | Usuário | Status/evidência |
 |---|---|---|---|
-| {{...}} | {{...}} | {{...}} | {{...}} |
+| Apoiar a análise de tomografias renais com uma indicação interpretável | Processo manual sujeito a limitações e risco de interpretação incorreta | Médico | [H] - contribuição e problema declarados |
 
 ## 9.2 Que ações o usuário deverá conseguir realizar?
 
 | ID | O usuário precisa conseguir... | Para alcançar... | Prioridade inicial |
 |---|---|---|---|
-| F01 | {{ação}} | {{objetivo}} | alta/média/baixa |
+| F01 | Carregar uma tomografia renal e confirmar os dados do exame | Iniciar uma análise válida | alta |
+| F02 | Acompanhar o processamento e identificar falhas | Saber quando o resultado está disponível ou precisa de correção | alta |
+| F03 | Consultar a classificação, a confiança e a explicação do modelo | Interpretar a indicação como apoio à avaliação médica | alta |
+| F04 | Registrar ou comunicar a conclusão da avaliação | Dar continuidade ao atendimento com rastreabilidade adequada | média |
 
 ## 9.3 Tecnologias/restrições já definidas no TCC
 
@@ -389,7 +405,9 @@ A tecnologia aparece **agora**, depois do entendimento do uso.
 
 | Tecnologia/restrição | Por que existe | Possível impacto na interação |
 |---|---|---|
-| {{...}} | {{...}} | {{...}} |
+| Modelo de IA baseado em redes convolucionais | Detectar/classificar patologias em imagens renais com baixo custo computacional | Pode exigir mensagens de processamento, indicação de limitações e apresentação cuidadosa da confiança |
+| Interpretabilidade do modelo | Permitir compreender os fatores associados ao resultado | Exige visualização ou descrição explicativa que não seja confundida com prova diagnóstica |
+| Dados de tomografia computadorizada | São a entrada necessária para o modelo | Exige validação de formato, qualidade, privacidade e identificação do exame |
 
 ---
 
@@ -397,9 +415,9 @@ A tecnologia aparece **agora**, depois do entendimento do uso.
 
 | ID | Hipótese/dúvida | Por que importa | Como poderá ser investigada |
 |---|---|---|---|
-| H01 | {{...}} | {{...}} | Entrega 2/3/7/... |
-| H02 | {{...}} | {{...}} | {{...}} |
-| H03 | {{...}} | {{...}} | {{...}} |
+| H01 | Médicos compreenderão e considerarão útil uma explicação do resultado do modelo apresentada junto à imagem | A aceitação depende da compreensão e da confiança na indicação | Entrega 3/7 |
+| H02 | O fluxo de upload, processamento e resultado representa uma atividade real e relevante no contexto profissional | Define o recorte de IHC e evita criar telas sem tarefa correspondente | Entrega 3/4/5 |
+| H03 | O médico distinguirá claramente a indicação do modelo do diagnóstico final | Um erro de interpretação pode produzir consequência clínica relevante | Entrega 4/7/8 |
 
 Registre em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 
@@ -409,23 +427,23 @@ Registre em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 
 | Pergunta | Síntese atual |
 |---|---|
-| Qual é a contribuição central do TCC? | {{...}} |
-| O TCC já previa interface? | {{...}} |
-| Quem é o usuário prioritário de IHC? | {{...}} |
-| O que ele precisa alcançar? | {{...}} |
-| Qual problema/atividade será estudado? | {{...}} |
-| Como isso acontece hoje? | {{...}} |
-| Qual é o contexto de uso? | {{...}} |
-| Que interface/recorte será explorado? | {{...}} |
-| Como a interface se relaciona ao TCC? | {{...}} |
-| Quais pontos ainda são hipóteses? | {{H01...}} |
+| Qual é a contribuição central do TCC? | Classificar imagens de tomografias renais com baixo custo computacional e oferecer interpretabilidade para apoiar a aplicabilidade clínica. |
+| O TCC já previa interface? | Sim; a forma final da interface ainda precisa ser detalhada. |
+| Quem é o usuário prioritário de IHC? | Médico radiologista ou especialista responsável pela interpretação do exame. |
+| O que ele precisa alcançar? | Analisar a tomografia, compreender a indicação do modelo e decidir como prosseguir com a avaliação clínica. |
+| Qual problema/atividade será estudado? | O carregamento de tomografias e a interpretação de resultados de apoio ao diagnóstico. |
+| Como isso acontece hoje? | Por análise visual e decisão de especialista, em processo declarado como manual. |
+| Qual é o contexto de uso? | Ambiente profissional de saúde, com possível pressão de tempo, dados sensíveis e responsabilidade clínica. |
+| Que interface/recorte será explorado? | Entrada do exame, acompanhamento do processamento e resultado explicável. |
+| Como a interface se relaciona ao TCC? | É uma interface prevista no sistema descrito e será refinada como recorte de IHC; a implementação no TCC ainda depende de decisão. |
+| Quais pontos ainda são hipóteses? | H01, H02, H03 e as demais afirmações marcadas `[H]`; ainda faltam dados com médicos e levantamento de alternativas. |
 
 ### Delimitação
 
-**Dentro do escopo de IHC:** {{...}}  
-**Fora do escopo de IHC:** {{...}}  
-**Dentro do escopo formal do TCC:** {{...}}  
-**Interface da disciplina será implementada no TCC?** não definido / sim / não — {{justificativa, se houver}}
+**Dentro do escopo de IHC:** investigar, modelar, prototipar e avaliar o fluxo de carregamento de tomografias, acompanhamento do processamento e interpretação explicável do resultado por médicos.  
+**Fora do escopo de IHC:** desenvolver toda a infraestrutura clínica, validar o modelo em larga escala, definir protocolos médicos, substituir o diagnóstico profissional, integrar todos os sistemas hospitalares e criar uma área administrativa completa.  
+**Dentro do escopo formal do TCC:** desenvolver e avaliar o modelo de detecção/classificação de patologias renais em tomografias, considerando desempenho, eficiência computacional e interpretabilidade, conforme o escopo declarado pela equipe.  
+**Interface da disciplina será implementada no TCC?** não definido - a interface é um recorte previsto para a disciplina e sua incorporação ao TCC depende de decisão da equipe e da orientadora.
 
 ---
 
@@ -449,9 +467,9 @@ A Entrega 1 é uma **fotografia inicial do conhecimento**. Ela pode e deve ser r
 
 Prepare uma explicação de até três frases:
 
-1. **Problema/atividade humana:** {{...}}
-2. **Contribuição técnica do TCC:** {{...}}
-3. **Como uma pessoa poderia utilizar essa contribuição:** {{...}}
+1. **Problema/atividade humana:** Médicos precisam analisar tomografias renais e identificar possíveis patologias, inclusive alterações que podem ser difíceis de perceber em uma análise manual.
+2. **Contribuição técnica do TCC:** Um modelo de redes convolucionais classifica imagens renais buscando baixo custo computacional e interpretabilidade.
+3. **Como uma pessoa poderia utilizar essa contribuição:** Um médico poderia carregar uma tomografia, consultar a indicação e a explicação do modelo e usar essas informações como apoio, sem substituir sua avaliação clínica.
 
 Essa síntese ajuda a apresentar o projeto para público não especializado sem reduzir seu mérito técnico.
 
@@ -459,21 +477,21 @@ Essa síntese ajuda a apresentar o projeto para público não especializado sem 
 
 # Checklist de qualidade
 
-- [ ] Está clara a diferença entre tema do TCC, escopo formal do TCC e escopo de IHC.
-- [ ] A equipe declarou se o TCC já previa interface.
+- [x] Está clara a diferença entre tema do TCC, escopo formal do TCC e escopo de IHC.
+- [x] A equipe declarou se o TCC já previa interface.
 - [ ] Se não previa, foi derivado um usuário plausível e um objetivo de uso.
-- [ ] A interface de IHC não foi apresentada como obrigação automática do TCC.
-- [ ] A contribuição do TCC foi descrita sem começar por tecnologias de implementação.
-- [ ] Usuários diretos e stakeholders foram diferenciados.
-- [ ] Foram considerados profissionais que configuram, administram, interpretam ou decidem, quando pertinente.
-- [ ] Objetivo do usuário não foi confundido com objetivo do projeto.
-- [ ] Processo/problema atual foi descrito antes da solução.
-- [ ] Existe situação concreta de uso/problema.
-- [ ] Contexto físico, social/organizacional, dispositivos e consequências de erro foram considerados.
-- [ ] Mercado/alternativas existentes foram levantados inicialmente.
-- [ ] Possibilidades como dashboard, relatório, histórico, filtros e CRUD foram tratadas como hipóteses de solução, não como requisitos automáticos.
-- [ ] Cada possibilidade de interface tem um objetivo/tarefa que poderia justificá-la.
-- [ ] Afirmações relevantes estão marcadas `[F]`, `[H]` ou `[?]`.
-- [ ] Hipóteses prioritárias receberam IDs e foram para a rastreabilidade.
-- [ ] O recorte de IHC é viável para modelar, prototipar e avaliar no semestre.
-- [ ] A equipe consegue explicar problema humano → contribuição computacional → forma de uso.
+- [x] A interface de IHC não foi apresentada como obrigação automática do TCC.
+- [x] A contribuição do TCC foi descrita sem começar por tecnologias de implementação.
+- [x] Usuários diretos e stakeholders foram diferenciados.
+- [x] Foram considerados profissionais que configuram, administram, interpretam ou decidem, quando pertinente.
+- [x] Objetivo do usuário não foi confundido com objetivo do projeto.
+- [x] Processo/problema atual foi descrito antes da solução.
+- [x] Existe situação concreta de uso/problema.
+- [x] Contexto físico, social/organizacional, dispositivos e consequências de erro foram considerados.
+- [x] Mercado/alternativas existentes foram levantados inicialmente.
+- [x] Possibilidades como dashboard, relatório, histórico, filtros e CRUD foram tratadas como hipóteses de solução, não como requisitos automáticos.
+- [x] Cada possibilidade de interface tem um objetivo/tarefa que poderia justificá-la.
+- [x] Afirmações relevantes estão marcadas `[F]`, `[H]` ou `[?]`.
+- [x] Hipóteses prioritárias receberam IDs e foram para a rastreabilidade.
+- [x] O recorte de IHC é viável para modelar, prototipar e avaliar no semestre.
+- [x] A equipe consegue explicar problema humano → contribuição computacional → forma de uso.
