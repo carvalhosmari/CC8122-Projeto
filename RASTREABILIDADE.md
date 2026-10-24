@@ -33,6 +33,7 @@ Use esta tabela para itens importantes marcados como `[H]` ou `[?]`. Preserve o 
 | H04 | O médico nefrologista poderá ter familiaridade com sistemas de visualização de exames, mas não necessariamente com métricas de aprendizado de máquina | H | A experiência e as necessidades de apresentação podem orientar o vocabulário e o nível de detalhe | Entrega 3 / 7 | PENDENTE — investigar com médicos nefrologistas | aberta | Pode orientar o vocabulário e o nível de detalhe da interface |
 | H05 | A rotina de avaliação de tomografias poderá envolver pressão de tempo ou dificuldade para identificar alterações sutis; instituição, etapas, papéis, sistemas e condições ainda são desconhecidos | H | O contexto e as dificuldades reais podem alterar o problema e o recorte de IHC | Entrega 3 / 4 | PENDENTE — investigar com profissionais envolvidos na avaliação do exame | aberta | Pode confirmar, alterar ou refutar a situação de uso descrita |
 | H06 | Classificação, medida de confiança e explicação do modelo são elementos distintos; quais são produzidos, necessários e compreendidos pelo nefrologista ainda precisa ser investigado | H | Evita tratar elementos diferentes como equivalentes ou presumir que todos devam ser apresentados na interface | Entrega 3 / 7 | PENDENTE — investigar com médicos nefrologistas | aberta | Pode definir quais informações serão apresentadas e como serão diferenciadas da conclusão clínica |
+| H07 | A pessoa usuária do recorte precisará consultar exames anteriores ou filtrar um histórico dentro da solução | H | A existência desse padrão em outras interfaces não demonstra que a tarefa seja necessária no fluxo de tomografias renais | Entrega 3 / 7 | Entrega 2 registra o padrão em Shosp e Nav Pro; o feedback do professor indica que a necessidade no projeto ainda não foi demonstrada | PENDENTE — investigar com médicos e profissionais envolvidos no fluxo do exame | aberta | Não especificar histórico ou filtros como requisito antes de confirmar a tarefa |
 
 ## 3. Rastreabilidade entre contribuição técnica, necessidades e artefatos
 
@@ -43,19 +44,19 @@ Use esta tabela para itens importantes marcados como `[H]` ou `[?]`. Preserve o 
 
 ## 4. Rastreabilidade de padrões de interface
 
-Use esta tabela quando o projeto incorporar padrões como dashboard, relatório, histórico, filtros ou administração. O objetivo é **justificar o padrão**, não apenas listar telas.
+Registre padrões observados e sua situação no projeto. A presença em uma interface de referência não significa que o padrão foi adotado.
 
-| ID da tela/fluxo | Padrão de interface | Objetivo/tarefa que justifica | Informação/ação principal | Evidência de necessidade | Artefatos relacionados |
+| ID da tela/fluxo | Padrão de interface | Objetivo/tarefa que justifica | Informação/ação principal | Evidência observada e lacuna | Situação no projeto / artefatos relacionados |
 |---|---|---|---|---|---|
-| F01 | dashboard | {{T01}} | {{...}} | {{H01/evidência...}} | {{C01/M01}} |
-| F02 | histórico com filtros | {{T02}} | {{...}} | {{...}} | {{...}} |
-| F03 | administração/CRUD | {{T03}} | {{...}} | {{...}} | {{...}} |
+| F01 | Menu lateral e abas | Acessar etapas/áreas do fluxo proposto de fornecimento do exame, processamento e consulta do resultado; tarefas e quantidade de áreas ainda precisam ser validadas | Navegação entre áreas ou etapas | C01 registra menu lateral e abas; C02 (Nav Pro) tem abas descritas na Entrega 2. Essas evidências não demonstram que o projeto precise de vários módulos. | Hipótese de navegação, não decisão; validar H02. Entrega 2, seções 2–4 |
+| F02 | Histórico e filtros | Localizar exames anteriores, se essa tarefa for confirmada | Busca, filtros e acesso a exames anteriores | Entrega 2 registra o padrão para Shosp e Nav Pro, mas não há confirmação de necessidade no fluxo do projeto. | Padrão observado; necessidade pendente, H07. Entrega 2, seções 3.1 e 5 |
+| F03 | Administração/CRUD | Manter dados administrativos, caso tarefas e papéis desse tipo sejam identificados | Cadastro e manutenção de registros | C01 registra áreas de cadastro no Shosp; não há evidência registrada de CRUD no Nav Pro nem tarefa administrativa definida na Entrega 1. | Não adotar sem tarefa confirmada. Entrega 1, seção 7; Entrega 2, seções 2, 3.1 e 5 |
 
 ## 5. Registro de mudanças de escopo
 
 | Data | O que mudou | Evidência/feedback que motivou | Artefatos afetados | Responsável |
 |---|---|---|---|---|
-| {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
+| 24/10/2026 | Nav Pro incorporado à síntese; RC01–RC07 filtradas como hipótese, investigação ou candidata; observações limitadas às evidências registradas; necessidade de histórico mantida como hipótese H07 | Feedback do professor da Entrega 2, especialmente correções prioritárias 1–5; evidências já registradas na análise C01 e nas telas do Nav Pro | `docs/02_analise_concorrencia.md`; seções 2 e 4 desta matriz | Equipe 12 |
 
 ## Como usar
 

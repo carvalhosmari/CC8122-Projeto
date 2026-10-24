@@ -36,7 +36,7 @@ Se uma hipótese da Entrega 1 for confirmada ou refutada durante esta análise, 
 
 ## 1. Público-alvo desta análise
 
-O público alvo da análise são médicos que utilizam softwares de gestão clínica como ferramenta cotidiana.
+O perfil prioritário inicial definido na Entrega 1 é o médico nefrologista, cuja adequação ao uso da solução ainda precisa ser validada com profissionais. Shosp e Nav Pro são referências de interfaces usadas pelo público-alvo; sua inclusão não amplia nem redefine esse perfil.
 
 ## 2. Concorrentes diretos/indiretos
 
@@ -55,12 +55,12 @@ Segundo a marca, é um software médico completo e intuitivo com todas as funcio
 
 | Funcionalidade | Como é realizada | Evidência/print | Observação de IHC |
 |---|---|---|---|
-| Login | Através de email e senha, ou via conta Google. | ![01-shosp-login](../assets/02_concorrencia/01-shosp-login.png) | A autenticação oferece duas vias de acesso (email/senha e Google), reduzindo atrito para usuários já habituados com serviços digitais. O destaque visual do botão principal facilita a ação principal, embora mensagens de erro mais explícitas e recuperação de conta sejam importantes para evitar frustração em caso de falha. |
-| Agendamento online | Paciente preenche informações de unidade, especialidade e serviço para visualizar a disponibilidade. | ![02-shosp-agend-online](../assets/02_concorrencia/02-shosp-agend-online.png) | O fluxo guiado por etapas e a seleção de disponibilidade antes do cadastro ajudam a reduzir incertezas. A interface usa filtros por unidade, especialidade e calendário, o que é compatível com padrões de agendamento e torna a tarefa rápida e compreensível para o público. |
-| Agendamento | Pessoa responsável pelo agendamento seleciona o profissional, dia e horário desejados, e preenche as informações do paciente. | ![03-shosp-agend](../assets/02_concorrencia/03-shosp-agend.png) | A divisão em etapas (profissional, data/horário e dados do paciente) organiza bem a tarefa e reduz carga cognitiva. O uso de seleção direta e campos estruturados favorece eficiência, mas a quantidade de informações exige boa hierarquia visual para evitar erros de preenchimento. |
-| Prontuário | Usuários conseguem acessar todas as informações referente à um atendimento (receituário, solicitação de exames, atestados, etc.).  | ![04-shosp-prontuario](../assets/02_concorrencia/04-shosp-prontuario.png) | O prontuário centraliza informações do atendimento em um único local, facilitando a consulta em contexto clínico. A separação por módulos (receituário, exames, atestados) ajuda a organização, porém a densidade de dados pode gerar sobrecarga visual se não houver filtros e agrupamentos claros. |
-| Financeiro | Usuários têm acesso à informações financeiras (movimentos, contas a pagar/receber, repasses, conciliações bancárias, etc.). | ![05-shosp-financ](../assets/02_concorrencia/05-shosp-financ.png) | A interface evidencia dados financeiros em blocos e listas, o que é útil para acompanhamento operacional. A estrutura por categorias facilita a leitura e a navegação, mas telas muito densas podem exigir maior esforço de interpretação e treinamento do usuário. |
-| Cadastro | Possibilida o gerenciamento de pacientes, prestadores, unidades, serviços, usuários do sistema, etc. | ![06-shosp-cadastro](../assets/02_concorrencia/06-shosp-cadastro.png) | O cadastro organiza a gestão em módulos específicos (pacientes, prestadores, serviços, usuários), o que favorece escala e manutenção. A estrutura de formulários e listagens é funcional e compreensível, mas exige boa validação de campos e clareza visual para evitar falhas em operações frequentes. |
+| Login | Através de email e senha, ou via conta Google. | ![01-shosp-login](../assets/02_concorrencia/01-shosp-login.png) | A tela apresenta duas formas de autenticação e destaca visualmente a ação principal. O print não permite concluir como o sistema trata falhas de autenticação ou recuperação de conta. |
+| Agendamento online | Paciente preenche informações de unidade, especialidade e serviço para visualizar a disponibilidade. | ![02-shosp-agend-online](../assets/02_concorrencia/02-shosp-agend-online.png) | O fluxo organiza a seleção de unidade, especialidade e disponibilidade em etapas/campos. O print não mede rapidez nem facilidade de uso. |
+| Agendamento | Pessoa responsável pelo agendamento seleciona o profissional, dia e horário desejados, e preenche as informações do paciente. | ![03-shosp-agend](../assets/02_concorrencia/03-shosp-agend.png) | A tela apresenta etapas para profissional, data/horário e dados do paciente, além de campos estruturados. A quantidade de informações torna relevante observar a hierarquia visual; não há evidência de uso que permita afirmar redução de carga cognitiva ou de erros. |
+| Prontuário | Usuários conseguem acessar todas as informações referente à um atendimento (receituário, solicitação de exames, atestados, etc.).  | ![04-shosp-prontuario](../assets/02_concorrencia/04-shosp-prontuario.png) | O prontuário reúne informações do atendimento e as separa por áreas, como receituário e exames. A tela apresenta vários dados e controles; essa densidade é um aspecto a considerar na análise visual. |
+| Financeiro | Usuários têm acesso à informações financeiras (movimentos, contas a pagar/receber, repasses, conciliações bancárias, etc.). | ![05-shosp-financ](../assets/02_concorrencia/05-shosp-financ.png) | A tela organiza informações financeiras em blocos e listas por categoria. A quantidade de conteúdo é observável, mas não permite concluir, por si só, o esforço de interpretação do usuário. |
+| Cadastro | Possibilida o gerenciamento de pacientes, prestadores, unidades, serviços, usuários do sistema, etc. | ![06-shosp-cadastro](../assets/02_concorrencia/06-shosp-cadastro.png) | A tela apresenta áreas de cadastro para diferentes entidades e usa formulários/listagens. A análise do print não permite afirmar como a validação de campos se comporta em operações reais. |
 
 #### Experiência do usuário e opiniões
 
@@ -79,21 +79,21 @@ Plano mensal por prestador a partir de R$149.
 #### Padrões e tendências percebidos
 
 1. Padrões visuais
-    - Predominância de azul e branco, transmitindo uma sensação de tecnologia, confiança e organização.
-    - Verde é utilizado principalmente para ações positivas ou de confirmação, como “Atender”, “Finalizar atendimento” e “Nova Venda”.
+    - Predominância de azul e branco; esta observação descreve a paleta, sem atribuir a ela efeitos sobre a percepção do usuário.
+    - Verde aparece em ações como “Atender”, “Finalizar atendimento” e “Nova Venda”.
     - Ícones são utilizados de forma recorrente para representar funcionalidades.
     - Tipografia simples e interface relativamente limpa.
     - O sistema utiliza diferentes áreas funcionais: agenda, prontuário, financeiro, relatórios etc.
     - As informações são organizadas em painéis, menus laterais, abas e blocos de conteúdo.
 
 2. Padrões de navegação e interação
-    Na aplicação administrativa, o menu vertical à esquerda concentra as principais funcionalidades. Isso facilita o acesso rápido a módulos diferentes sem precisar retornar à página inicial. Esse padrão é típico de sistemas ERP, CRM e sistemas de gestão hospitalar/clínica.
+    Na aplicação administrativa, o menu vertical à esquerda reúne funcionalidades de diferentes módulos. A tela evidencia a navegação disponível, mas não permite medir a rapidez de acesso.
 
     Na parte superior aparecem abas como:
 
     >RELATÓRIOS → CONFIGURAÇÕES → AGENDA DE PRESTADORES → PRONTUÁRIO → FINANCEIRO
 
-    Isso sugere uma interface que permite ao usuário trabalhar com várias áreas simultaneamente, mantendo o contexto das tarefas abertas.
+    As abas apresentam áreas funcionais diferentes no topo da interface.
 
 3. Principais tendências observadas
     - Digitalização do atendimento (agendamento online).
@@ -105,10 +105,10 @@ Plano mensal por prestador a partir de R$149.
 
 | Ponto | Evidência | Implicação para nosso projeto |
 |---|---|---|
-| Boa organização por módulos | ![06-shosp-cadastro](../assets/02_concorrencia/06-shosp-cadastro.png) | Ter um menu lateral e abas podem facilitar a localização das funcionalidades e deixar clara a divisão entre os diferentes processos. |
-| Interface visual consistente | ![01-shosp-login](../assets/02_concorrencia/01-shosp-login.png) | A utilização recorrente de cores e ícones pode ajudar a criar uma identidade visual relativamente uniforme. |
-| Excesso de informações | ![02-shosp-agend](../assets/02_concorrencia/03-shosp-agend.png) | Evitar telas com muitos menus, ícones, botões e informações simultaneamente. Para um usuário novo, isso pode gerar uma curva de aprendizado maior. |
-| Separação de funcionalidades | ![04-shosp-prontuario](../assets/02_concorrencia/04-shosp-prontuario.png) | Manter uma grande quantidade de funcionalidades disponíveis por tema pode fazer com que o usuário precise aprender muitos caminhos diferentes para executar suas tarefas, como por exemplo a configuração de um prontuário personalizado que poderia ser feito numa área de configuração.  |
+| Organização por módulos | ![06-shosp-cadastro](../assets/02_concorrencia/06-shosp-cadastro.png) | O menu e as áreas de cadastro mostram uma divisão por módulos. Sua adoção no projeto depende de identificar tarefas que justifiquem essa navegação. |
+| Uso recorrente de cores e ícones | ![01-shosp-login](../assets/02_concorrencia/01-shosp-login.png) | A tela registra o uso de cores e ícones; a consistência deve ser avaliada nas telas do próprio projeto, sem presumir efeito sobre a experiência. |
+| Densidade de informação | ![04-shosp-prontuario](../assets/02_concorrencia/04-shosp-prontuario.png) | O prontuário apresenta informações e controles na mesma tela. Para o projeto, observar a hierarquia entre imagem, identificação do exame e elementos do resultado é uma candidata a princípio de design. |
+| Separação de funcionalidades | ![04-shosp-prontuario](../assets/02_concorrencia/04-shosp-prontuario.png) | O Shosp separa funcionalidades clínicas e administrativas. Não há, até o momento, tarefas administrativas definidas para a solução de tomografias que justifiquem reproduzir essa estrutura. |
 
 
 > Repita a subseção para C02, C03... até atender à quantidade da equipe.
@@ -119,42 +119,42 @@ Analise interfaces que moldam a expectativa do público, mesmo que não sejam co
 
 | Software | Por que o público usa | Padrões relevantes | Prints | O que aprender |
 |---|---|---|---|---|
-| Nav Pro | Acompanhar e visualizar resultado de exames | Utilização de cores comumente utilizadas em sistemas médicos, utilização de ícones, separação por categorias, interface simples e intuitiva com informações relevantes, navegação por abas.  | ![01-nav-pro-inicio](../assets/02_concorrencia/01-nav-pro-inicio.png) ![02-nav-pro-result](../assets/02_concorrencia/02-nav-pro-result.png) ![03-nav-pro-evol](../assets/02_concorrencia/03-nav-pro-evol.png) | Manter uma interface simples e objetiva, que forneça ao usuário uma jornada amigável. |
+| Nav Pro | Acompanhar e visualizar resultado de exames | A análise registrada identifica telas de início, resultado e evolução, além de uso de ícones, categorias e abas. “Simples” e “intuitiva” não são conclusões de teste com usuários. | ![01-nav-pro-inicio](../assets/02_concorrencia/01-nav-pro-inicio.png) ![02-nav-pro-result](../assets/02_concorrencia/02-nav-pro-result.png) ![03-nav-pro-evol](../assets/02_concorrencia/03-nav-pro-evol.png) | Observar como as telas e categorias se relacionam com a consulta de resultados. Validar com o público-alvo quais informações e termos são adequados ao fluxo de tomografia renal. |
 
 ## 3.1 Padrões de interface relevantes ao escopo de IHC
 
 Registre somente padrões encontrados nas soluções analisadas e que possam ter relação com objetivos reais da equipe.
 
-| Padrão observado | Produto(s) | Para qual tarefa serve | Vantagem percebida | Risco/limitação | Aplicável ao nosso escopo? |
+| Padrão observado | Produto(s) | Para qual tarefa serve | Vantagem percebida | Risco/limitação | Situação no escopo |
 |---|---|---|---|---|---|
 | dashboard | - | - | - | - | não |
 | relatório | - | - | - | - | não |
-| histórico + filtros | Shosp, Nav Pro | Consultar o histórico de um paciente específico | Permite ao usuário alvo ter acesso à análises pré existentes | Armazenamento das análises, dado que a saída esperada é a visualização 3d da tomografia com interpretabilidade aplicada. | talvez |
-| administração/CRUD | Shosp, Nav Pro | Separação de perfis de usuários | A criação de perfis distintos permite gerenciar tipos de acesso | No momento não sei se é aplicável ao projeto. | talvez |
+| histórico + filtros | Shosp, Nav Pro | Possível consulta de exames anteriores; a tarefa ainda precisa ser confirmada para o recorte de tomografia renal | As interfaces analisadas registram esse padrão; a análise não comprova que ele seja necessário na solução | Não há necessidade confirmada de armazenar, localizar ou comparar exames anteriores no fluxo do projeto. | padrão observado; hipótese a validar |
+| administração/CRUD | Shosp | Possível manutenção de dados administrativos; nenhuma tarefa desse tipo foi identificada para o fluxo principal | A análise do Shosp registra áreas de cadastro; não há evidência registrada de CRUD no Nav Pro | A Entrega 1 não definiu perfis, papéis ou tarefas administrativas para a solução. | padrão observado; não adotar sem tarefa confirmada |
 | comparação de resultados | - | - | - | - | não |
 
 > O objetivo não é concluir “todo concorrente tem dashboard, então teremos um”. O padrão só será adotado se apoiar uma tarefa rastreável.
 
 ## 4. Síntese comparativa da equipe
 
-| Critério | C01 | C02 | C03 | Oportunidade para o projeto |
+| Critério | C01 — Shosp | C02 — Nav Pro (referência cotidiana) | C03 — não analisado | Oportunidade para o projeto |
 |---|---|---|---|---|
-| Navegação | Menu lateral e abas organizam bem os módulos; acesso rápido entre agenda, prontuário e financeiro, mas há muitos caminhos e níveis de profundidade. |  |  | Usar menu lateral e abas apenas para módulos principais, com profundidade controlada e atalhos para tarefas frequentes. |
-| Feedback/estado | Usa cores e ícones para indicar ações e estados; porém o sistema pode parecer pouco transparente em falhas e instabilidades. |  |  | Priorizar indicadores visuais claros para ações e erros, sem depender apenas de cores; incluir mensagens explícitas de falha e confirmação. |
-| Prevenção/recuperação de erro | Fluxos em etapas e campos estruturados ajudam a reduzir erros; faltam mensagens mais explícitas e recuperação clara em casos de falha. |  |  | Adotar fluxos em etapas e validação contextual, com recuperação clara e mensagens de erro legíveis. |
-| Terminologia | Linguagem profissional e adequada ao contexto clínico/administrativo, mas pode ser densa para usuários menos experientes. |  |  | Usar linguagem clara e profissional, adaptada ao contexto clínico, sem excesso de jargão. |
-| Acessibilidade | Organização visual e contraste simples favorecem leitura, mas a densidade de informações e a grande quantidade de ações podem dificultar uso em telas complexas. |  |  | Manter contraste, hierarquia visual e reduzir densidade informacional em telas centrais para facilitar leitura e uso. |
-| Eficiência | Alta eficiência para tarefas recorrentes e gestão operacional; o processo é rápido, mas exige treinamento para navegar sem sobrecarga cognitiva. |  |  | Otimizar tarefas recorrentes com filtros, atalhos e organização por contexto, sem sobrecarregar o usuário. |
+| Navegação | O Shosp usa menu lateral e abas para suas áreas administrativas, como agenda, prontuário e financeiro. | A análise do Nav Pro registra telas de início, resultado e evolução, e descreve navegação por abas e categorias; não há medida de eficiência de navegação. | Não há terceiro produto analisado nesta entrega. | Mapear primeiro as tarefas do fluxo de exame; manter menu lateral, atalhos ou módulos como hipótese até que a quantidade de destinos seja conhecida. |
+| Feedback/estado | O Shosp usa cores e ícones em ações. As avaliações citadas mencionam instabilidade do serviço e suporte, não a qualidade do feedback da interface. | As telas do Nav Pro descritas como início, resultado e evolução não têm mensagens de erro ou estados de processamento documentados na análise. | Não há terceiro produto analisado nesta entrega. | Investigar mensagens e estados para recebimento, processamento, falha e disponibilidade do resultado no fluxo do projeto; não tratar reclamações de disponibilidade como evidência de falha de interface. |
+| Prevenção/recuperação de erro | O Shosp apresenta campos estruturados e etapas em fluxos de agendamento; a análise não documenta comportamento de erro nesses fluxos. | Não há comportamento de erro documentado nas telas do Nav Pro descritas. | Não há terceiro produto analisado nesta entrega. | Investigar validação e recuperação nas tarefas reais de fornecimento do exame e consulta do resultado; não assumir que os fluxos do Shosp se aplicam. |
+| Terminologia | A análise do Shosp registra termos clínicos e administrativos; para o Nav Pro, foram registrados “resultado” e “evolução”. | Os termos observados não comprovam adequação ao fluxo de interpretação de tomografias renais. | Não há terceiro produto analisado nesta entrega. | Validar com médicos os termos para classificação, confiança, explicação e conclusão profissional (H04 e H06). |
+| Acessibilidade/hierarquia | O prontuário e o financeiro do Shosp apresentam vários dados e controles; não foi realizada avaliação de acessibilidade. | A análise registra separação por categorias e informações relevantes, sem avaliar contraste, legibilidade ou uso assistivo. | Não há terceiro produto analisado nesta entrega. | Considerar hierarquia e densidade ao apresentar imagem, identificação do exame e resultado; avaliar acessibilidade nas telas do projeto. |
+| Eficiência | As telas do Shosp mostram módulos e etapas, mas não há observação ou medida de desempenho de usuários. | Abas e categorias são registradas na análise; não há observação ou medida de desempenho de usuários. | Não há terceiro produto analisado nesta entrega. | Investigar o fluxo com usuários antes de definir atalhos, filtros ou otimizações para tarefas recorrentes. |
 
 ## 5. Recomendações derivadas
 
-- **RC01:** Priorizar um menu lateral com poucos módulos principais e atalhos para tarefas frequentes - derivada de C01 (Shosp), especialmente na organização de agenda, prontuário e financeiro.
-- **RC02:** Incluir mensagens de erro e confirmação claras, sem depender apenas da cor - derivada de C01 (feedback/estado e da criticidade de instabilidade reportada pelos usuários).
-- **RC03:** Manter linguagem profissional, mas simples e consistente com o contexto clínico - derivada de C01 (terminologia e densidade de informação).
-- **RC04:** Reduzir densidade visual em telas centrais e manter hierarquia clara para informações críticas - derivada de C01 (prontuário e financeiro).
-- **RC05:** Garantir filtros e histórico de consultas para facilitar retomada de contexto e comparação de casos - derivada de C01 e do padrão “histórico + filtros” observado em Shosp e Nav Pro.
-- **RC06:** Oferecer visão resumida de status e ações principais por contexto, sem sobrecarregar o usuário - derivada de C01 e de convenções de sistemas médicos/profissionais.
-- **RC07:** Separar claramente módulos de operação e configuração, evitando excesso de profundidade na navegação - derivada de C01, que apresenta grande quantidade de funcionalidades e caminhos.
+- **RC01 — hipótese a validar:** O Shosp apresenta menu lateral e múltiplos módulos (C01, cadastro e navegação administrativa). O fluxo proposto para o projeto é fornecer o exame, acompanhar o processamento e consultar o resultado; ainda não há tarefas que demonstrem a necessidade de vários módulos ou de um menu lateral. Definir a arquitetura de navegação após mapear esse fluxo.
+- **RC02 — investigar no fluxo do projeto:** Os prints do Shosp registram telas de autenticação e formulários, mas não documentam falhas e recuperação; as avaliações citadas tratam de instabilidade do serviço e suporte, não de mensagens da interface. Como o fluxo proposto envolve fornecimento do exame e processamento, investigar mensagens explícitas de erro, confirmação e recuperação nessas tarefas, sem atribuir essa recomendação às avaliações de disponibilidade.
+- **RC03 — investigar com usuários:** O Shosp apresenta vocabulário clínico e administrativo, e a descrição do Nav Pro registra “resultado” e “evolução”. Essas evidências não confirmam a adequação dos termos ao fluxo de interpretação renal. Validar com médicos a linguagem para classificação, confiança, explicação e conclusão profissional (H04 e H06).
+- **RC04 — candidata a princípio de design:** A tela de prontuário do Shosp concentra informações e controles (C01, print 04). No fluxo proposto, imagem, identificação do exame e elementos do resultado podem disputar atenção; ao projetar essas telas, avaliar densidade e hierarquia visual sem presumir que os dados devam ficar simultaneamente visíveis.
+- **RC05 — padrão observado, necessidade a validar:** A análise registra histórico/filtros em Shosp e Nav Pro (seção 3.1), mas isso não comprova que o usuário precise buscar ou comparar exames anteriores na solução. Investigar essa tarefa antes de especificar filtros ou histórico.
+- **RC06 — hipótese a investigar:** O fluxo proposto inclui acompanhar o processamento do exame, mas a análise das interfaces não documenta um padrão específico de status do Nav Pro ou mensagens de processamento no Shosp. Investigar quais estados e ações precisam ser apresentados (por exemplo, exame recebido, processamento, falha ou resultado disponível) antes de decidir por uma visão resumida.
+- **RC07 — hipótese a validar:** O Shosp apresenta funcionalidades administrativas e de configuração (C01), mas a Entrega 1 não identificou tarefas administrativas necessárias à solução de análise de tomografias. Não separar módulos de operação e configuração até confirmar que essas tarefas existem.
 
 ## Referências
 
@@ -175,5 +175,5 @@ Registre somente padrões encontrados nas soluções analisadas e que possam ter
 - [ ] Em TCC sem interface original, foram investigadas ferramentas profissionais análogas às atividades do usuário escolhido.
 - [x] Padrões como dashboard, relatório, filtros e CRUD foram analisados como soluções para tarefas, não como requisitos automáticos.
 - [x] Opiniões de UX têm fonte.
-- [x] A síntese compara critérios comuns e produz recomendações.
-- [x] Não há “copiar porque o concorrente faz”; há justificativa de adequação ao público/contexto.
+- [x] A síntese compara Shosp e Nav Pro em critérios comuns e explicita limites das evidências disponíveis.
+- [x] Recomendações distinguem candidatas e hipóteses de decisões já validadas; padrões administrativos do Shosp não são tratados como requisitos automáticos.
