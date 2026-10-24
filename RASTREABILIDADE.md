@@ -39,8 +39,7 @@ Use esta tabela para itens importantes marcados como `[H]` ou `[?]`. Preserve o 
 
 | ID | Capacidade do TCC utilizada | Necessidade/problema | Persona | Cenário problema | Objetivo/tarefa | HTA/GOMS/CTT | Cenário de interação / signos | MoLIC | Tela(s) Figma | Heurística / problema | Tarefa no teste | Decisão/melhoria |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| R01 | {{ex.: recomendação de otimização}} | {{...}} | {{P01}} | {{C01}} | {{T01}} | {{links}} | {{...}} | {{M01}} | {{F01...}} | {{V01 ou —}} | {{UT01}} | {{...}} |
-| R02 |  |  |  |  |  |  |  |  |  |  |  |  |
+| R01 | Classificar imagens de tomografias renais; eficiência computacional e interpretabilidade são objetivos declarados do TCC | [H] Avaliar uma tomografia e considerar a indicação do modelo para decidir como prosseguir; validar H01, H02, H03 e H06 | P01 — Mário Russano (proto-persona; perfil inicial, sem validação com usuários) | PENDENTE — Entrega 4 | [H] Avaliar tomografia e decidir como prosseguir (Entrega 1, seção 7.3) | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | Investigar tarefa, fluxo, compreensão da saída e pós-uso antes de fixar requisitos ou telas |
 
 ## 4. Rastreabilidade de padrões de interface
 
@@ -57,6 +56,7 @@ Registre padrões observados e sua situação no projeto. A presença em uma int
 | Data | O que mudou | Evidência/feedback que motivou | Artefatos afetados | Responsável |
 |---|---|---|---|---|
 | 24/10/2026 | Nav Pro incorporado à síntese; RC01–RC07 filtradas como hipótese, investigação ou candidata; observações limitadas às evidências registradas; necessidade de histórico mantida como hipótese H07 | Feedback do professor da Entrega 2, especialmente correções prioritárias 1–5; evidências já registradas na análise C01 e nas telas do Nav Pro | `docs/02_analise_concorrencia.md`; seções 2 e 4 desta matriz | Equipe 12 |
+| 24/10/2026 | P01 registrada como proto-persona provisória; contexto, mapa e jornada marcados com evidências, hipóteses e lacunas; jornada ampliada para investigar o pós-uso; síntese da Entrega 3 preenchida; R01 atualizado sem presumir cenários ou tarefas ainda não produzidos | Feedback do professor da Entrega 3, correções prioritárias 2–13; Entrega 1, seções 0.4, 1.3, 1.5 e 7.2–7.3; não há validação com usuários registrada | `docs/03_personas_contexto_jornada.md`; `assets/03_personas/mapa_empatia.svg`; R01 desta matriz | Equipe 12 |
 
 ## Como usar
 
