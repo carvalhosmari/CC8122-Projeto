@@ -28,12 +28,12 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 
 | Item da Entrega 1 | Status inicial | Evidência disponível agora | Como será tratado nesta entrega |
 |---|---|---|---|
-| Usuário direto/beneficiário | H | A Entrega 1 indica “Médicos” como usuários diretos e menciona o perfil de “médico radiologista ou especialista responsável pelo diagnóstico”; o TCC também aponta valor para avaliação clínica de tomografias renais. | Incorporar como persona primária, com foco em médico especialista que interpreta exames renais. |
-| Objetivo principal do usuário | F | A Entrega 1 registra que o usuário busca “obter auxílio diagnóstico de patologias renais em estágios iniciais”, e o TCC reforça a necessidade de apoiar a avaliação de tomografias para detectar alterações precoces. | Incorporar como objetivo central da persona e orientar tarefas, dores e jornada. |
-| Característica relevante: conhecimento clínico e baixa familiaridade com ML | H | A Entrega 1 afirma que o médico tem familiaridade com sistemas de exames, mas pode não conhecer métricas de aprendizado de máquina; o problema de explicabilidade também aparece como ponto crítico. | Incorporar como característica, necessidade e restrição de design da persona. |
-| H01 - explicação do modelo aumenta confiança e uso | H | A hipótese indica que médicos considerarão útil uma explicação do resultado junto à imagem, e a análise do problema destaca a necessidade de interpretar a indicação do modelo para decidir a conduta clínica. | Manter como hipótese-chave a validar na persona, no mapa de empatia e na jornada. |
-| H02 - fluxo de upload, processamento e resultado é relevante no contexto profissional | H | A Entrega 1 identifica seleção e carregamento de exames, consulta à classificação e interpretação do resultado como atividades frequentes/altamente críticas. | Manter como hipótese relevante e consolidar no contexto de uso e na jornada do usuário. |
-| H03 - médico distingue a indicação da IA do diagnóstico final | H | A Entrega 1 destaca responsabilidade profissional, necessidade de distinção entre predição e decisão médica e risco de interpretação incorreta do resultado. | Incorporar como requisito de clareza, governança e confiança no design da interface. |
+| Usuário direto/beneficiário | H | A Entrega 1 registra perfis potenciais e escolhe inicialmente o nefrologista; o uso direto e a adequação do perfil precisam ser validados. O objetivo técnico declarado pelo TCC não comprova adoção clínica. | Manter P01 como proto-persona do recorte provisório, sem tratar o perfil como usuário confirmado. |
+| Objetivo principal do usuário | H | A Entrega 1, seção 7.3, propõe avaliar tomografias e considerar a indicação do modelo; a própria entrega marca a atividade e o benefício como não validados com profissionais. | Usar como objetivo provisório para orientar perguntas e tarefas futuras, não como fato sobre usuários. |
+| Característica relevante: conhecimento clínico e baixa familiaridade com ML | H / [?] | H04 propõe familiaridade com sistemas de visualização e possível desconhecimento de métricas de ML; experiência, vocabulário e necessidades ainda não foram levantados. | Manter como hipótese e investigar antes de definir linguagem ou detalhe da interface. |
+| H01 - explicação do modelo pode ser compreensível e útil | H | H01 pergunta se médicos nefrologistas compreenderão e considerarão útil a explicação; compreensão, utilidade, confiança e adoção não foram observadas nem demonstradas. | Manter como hipótese, sem presumir que explicabilidade produza confiança ou uso. |
+| H02 - fluxo de fornecimento do exame, processamento e resultado | H | A Entrega 1 propõe esse recorte, mas quem fornece/acessa o exame, o meio de entrada e a relevância do fluxo no trabalho real permanecem desconhecidos. Frequência e criticidade não foram confirmadas. | Apresentar a jornada como provisória e investigar o fluxo antes de consolidá-lo. |
+| H03 - médico distingue a indicação da IA do diagnóstico final | H | H03 registra essa distinção como hipótese; entendimento, responsabilidades e possíveis consequências precisam ser investigados com profissionais. | Investigar antes de definir mensagens, governança ou requisitos de interface. |
 
 ## 1. Personas
 
@@ -41,84 +41,91 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 
 **Autor(a):** Mariane S. Carvalho  
 **Tipo:** primária 
-**Base de evidências:** proto-persona a validar  
+**Base de evidências:** proto-persona a validar; nenhum dado de entrevista ou observação de usuários está registrado nesta entrega. O tema e a contribuição técnica do TCC são declarações documentadas; as características pessoais e profissionais abaixo permanecem hipóteses.
 **Hipóteses da Entrega 1 relacionadas:** H02
 
 ![Persona P01](../assets/03_personas/persona_p01.png)
 
 | Campo | Descrição |
 |---|---|
-| Faixa etária / contexto relevante | 45 anos, médico experiente, com rotina clínica intensa e necessidade de tomar decisões com agilidade. Atua principalmente no acompanhamento e diagnóstico de pacientes com doenças renais. |
-| Ocupação/papel | Médico nefrologista, responsável pela avaliação clínica dos pacientes, interpretação de exames e definição de condutas. Pode atuar em hospital, clínica especializada ou centro de diagnóstico. |
-| Conhecimento do domínio | Amplo conhecimento em nefrologia, doenças renais e interpretação de exames relacionados aos rins. Possui experiência para avaliar achados clínicos e imagéticos e confrontá-los com o histórico do paciente. |
-| Experiência tecnológica | Intermediária/alta. Utiliza prontuários eletrônicos, sistemas hospitalares e plataformas de exames diariamente. Não necessariamente possui conhecimento técnico sobre IA ou CNNs, mas entende os resultados clínicos e espera que o sistema seja simples de utilizar.  |
-| Objetivos | Aumentar a precisão e agilidade da avaliação, identificar possíveis alterações renais em imagens, reduzir o risco de passar despercebidos achados relevantes e utilizar informações adicionais para apoiar sua decisão clínica. |
-| Necessidades | Receber resultados claros, rápidos e confiáveis; visualizar a imagem analisada; identificar a região que levou o sistema a sinalizar uma possível alteração; compreender o resultado de maneira objetiva; comparar o resultado da IA com sua própria avaliação. |
-| Dores/frustrações | Grande volume de exames; jornada de trabalho exaustiva; possibilidade de alterações sutis passarem despercebidas; sistemas hospitalares complexos; resultados de IA que não explicam por que chegaram a determinada conclusão; receio de confiar em uma ferramenta sem compreender suas limitações. |
-| Motivadores | Melhorar a qualidade do atendimento; reduzir erros de interpretação; ganhar tempo na análise; utilizar novas tecnologias de forma segura; ter maior confiança nas decisões clínicas e oferecer um diagnóstico mais consistente aos pacientes. |
-| Restrições/acessibilidade | Possui pouco tempo para aprender sistemas novos. A interface deve exigir baixa carga cognitiva, apresentar informações de forma objetiva e utilizar textos, ícones e indicadores facilmente compreensíveis. Deve permitir boa visualização das imagens e dos resultados, inclusive em monitores hospitalares de diferentes tamanhos. |
-| Ambiente típico de uso | Consultório, clínica ou hospital, geralmente em um computador de trabalho, durante a avaliação de exames de pacientes. Pode utilizar o sistema em momentos de alta demanda, com interrupções frequentes. |
-| Comportamentos relevantes | Analisa primeiro as informações clínicas e os exames; tende a validar o resultado da ferramenta antes de utilizá-lo; procura evidências visuais para confirmar uma indicação da IA; prefere interfaces objetivas; compara diferentes informações antes de tomar uma decisão; tende a desconfiar de resultados que não apresentem justificativa ou evidência visual. |
+| Faixa etária / contexto relevante | [H] A idade fictícia de 45 anos e a rotina clínica intensa são elementos narrativos, sem evidência de usuários consultados. |
+| Ocupação/papel | [H] Médico nefrologista é o perfil priorizado inicialmente pela equipe na Entrega 1, seção 7.2; o uso direto da solução por esse perfil ainda precisa ser validado. |
+| Conhecimento do domínio | [H] Conhecimento especializado em nefrologia e interpretação de tomografias, bem como a relação dessa atividade com o fluxo proposto, precisam ser investigados com profissionais. |
+| Experiência tecnológica | [H] Familiaridade com sistemas clínicos e conhecimento de IA/ML não foram levantados; não se presume uso diário de sistemas nem nível de experiência. |
+| Objetivos | [H] Avaliar possíveis achados em tomografias e considerar a indicação do modelo ao decidir como prosseguir é o objetivo proposto pela equipe (Entrega 1, seção 7.3), ainda não validado com usuários. |
+| Necessidades | [H] Clareza, visualização da imagem e compreensão da explicação são necessidades a investigar (H01, H06); não se presume que todas sejam necessárias ou atendidas pelo modelo. |
+| Dores/frustrações | [H] Pressão de tempo e possível dificuldade para identificar alterações sutis são hipóteses pendentes (H05). [?] Volume de exames, interrupções e frustração com sistemas não foram observados nem relatados por usuários. |
+| Motivadores | [H] Benefícios como apoiar a avaliação e compreender a indicação do modelo são esperados pela equipe a partir do objetivo do TCC; impacto na prática clínica não foi demonstrado. |
+| Restrições/acessibilidade | [?] Tempo de aprendizagem, carga cognitiva, dispositivos, monitores e necessidades de acessibilidade do público não foram investigados. |
+| Ambiente típico de uso | [?] Instituição, local, equipamentos, presença de outras pessoas, interrupções e condições de uso permanecem desconhecidos; ver investigação do contexto na seção 3. |
+| Comportamentos relevantes | [H] Comparar a indicação do modelo com a própria avaliação é uma hipótese ligada a H01–H03, não um comportamento observado. |
 
-**Decisões de design influenciadas por P01:**
+**Direções provisórias de design a validar com P01:**
 
-- Resultado objetivo: apresentar a classificação de maneira clara, evitando excesso de informações técnicas.
-- Explicabilidade: permitir visualizar onde o modelo concentrou sua atenção na imagem.
-- Comparação: possibilitar visualizar a imagem original junto da indicação gerada pelo sistema.
-- Confiança: apresentar métricas ou indicadores de confiança de maneira compreensível, sem transformar o sistema em uma “caixa-preta”.
-- Agilidade: o fluxo para carregar/analisar uma imagem e visualizar o resultado deve ter poucos passos.
-- Controle médico: deixar explícito que o resultado é apoio à decisão, cabendo ao médico a avaliação final.
-- Baixa carga cognitiva: evitar dashboards excessivamente complexos ou informações técnicas de ML que não contribuam diretamente para a decisão.
+- [H] Investigar quais elementos da classificação e da explicação são compreendidos e úteis antes de definir como apresentá-los (H01, H06).
+- [H] Verificar se comparar a imagem e a indicação do modelo faz parte da tarefa; não presumir que o modelo produza uma visualização de regiões relevantes (H01, H06).
+- [H] Investigar como distinguir a indicação do modelo de uma conclusão clínica (H03).
+- [?] Não especificar indicador de confiança, quantidade de etapas, histórico, dashboard ou requisito de rapidez antes de confirmar a necessidade e a capacidade técnica correspondente (H02, H06, H07).
 
 > Repita para P02, P03... Cada integrante deve produzir ao menos uma persona.
 
 ### Síntese das personas
 
-O médico nefrologista é a persona prioritária porque possui conhecimento especializado sobre doenças renais e é diretamente responsável pela interpretação dos resultados clínicos. Como o software tem a finalidade de auxiliar na identificação de alterações em imagens dos rins, é esse profissional que utilizará os resultados da ferramenta para complementar sua própria avaliação.
+P01 é a persona primária do recorte de IHC definido pela equipe: o objetivo proposto é que um médico nefrologista considere a classificação de tomografias renais ao avaliar possíveis achados e decidir como prosseguir (Entrega 1, seções 7.2–7.3). Essa escolha relaciona o perfil ao objetivo e à tarefa central do exercício; não comprova que nefrologistas usem diretamente a solução nem que essa tarefa corresponda ao fluxo real. A adequação do perfil e sua relação com outros papéis permanecem por validar com profissionais (H02, H03).
 
 ## 2. Mapa de empatia - equipe
 
 **Persona escolhida:** P01  
-**Justificativa:** porque representa o principal usuário do sistema e, consequentemente, a pessoa que mais influencia se a solução realmente cumpre seu objetivo de auxiliar o diagnóstico.
+**Justificativa:** P01 representa o perfil escolhido para investigar o objetivo e a tarefa propostos na seção “Síntese das personas”. A primazia é uma decisão provisória de escopo, não uma conclusão sobre o fluxo clínico real.
 
 ![Mapa de empatia](../assets/03_personas/mapa_empatia.png)
 
-Documente também em texto: o que vê; ouve; diz/faz; pensa/sente; dores; ganhos. Diferencie **evidência** de **hipótese**.
+O mapa foi refeito para relacionar as dimensões à tarefa de avaliar tomografias e considerar a indicação do modelo. Não há relatos de usuários nesta entrega; por isso, as hipóteses são identificadas como `[H]` e as informações desconhecidas como `[?]`. As perguntas no mapa orientam investigação e não são falas ou comportamentos atribuídos a Mário.
+
+| Dimensão | Registro provisório | Estado e origem |
+|---|---|---|
+| O que vê | Pode consultar uma tomografia e uma classificação produzida por modelo no recorte proposto. Quais imagens, metadados e elementos do resultado estão disponíveis na prática? | [H] A contribuição técnica declarada classifica imagens de tomografias renais (Entrega 1, seções 0.2 e 1.3); a forma de uso está pendente (H02, H06). |
+| O que ouve | Que profissionais participam do encaminhamento, interpretação ou discussão do exame? O que comunicam entre si? | [?] Papéis, comunicações e colaboração reais não foram levantados. |
+| O que fala e faz | Como seleciona/recebe o exame, avalia achados, consulta outras informações e decide como prosseguir? O que faz quando a indicação automatizada diverge de sua avaliação? | [?] A atividade e o fluxo ainda não foram observados; considerar H02 e H03 como questões de pesquisa. |
+| O que pensa e sente | A explicação do modelo é compreensível e relevante? A indicação corresponde ao que observa na imagem? | [H] Questões derivadas de H01 e H03; não representam pensamentos ou emoções observados. |
+| Dores | Que dificuldades, interrupções, riscos de confusão ou retrabalho surgem durante a atividade? | [?] Não há evidência sobre dores reais; pressão de tempo e dificuldades permanecem hipóteses em H05. |
+| Ganhos esperados | Que resultado positivo a pessoa espera obter após considerar a informação do modelo? | [H] A equipe propõe apoio à avaliação clínica como benefício esperado (Entrega 1, seção 1.5); ganho percebido e efeito na atividade não foram demonstrados. |
+| Necessidades a investigar | Quais informações ajudariam a compreender a indicação sem confundi-la com conclusão clínica? A explicação ou uma medida de confiança seria útil e compreensível? | [H] Questões associadas a H01, H03 e H06; não são requisitos confirmados. |
 
 ## 3. Contexto de uso - consolidação
 
-| Dimensão | Descrição | Implicação de design |
+| Dimensão | Descrição e estado do conhecimento | Implicação de design / investigação |
 |---|---|---|
-| Usuários | Nefrologistas são os usuários principais, com conhecimento médico especializado e experiência variável com tecnologias de IA. Outros profissionais, como radiologistas ou equipe médica, podem eventualmente consultar os resultados. | Interface voltada ao conhecimento médico, sem exigir conhecimento técnico de IA. Utilizar linguagem clínica clara e permitir diferentes níveis de acesso conforme o perfil. |
-| Tarefas | Carregar/selecionar imagens, iniciar o processamento, visualizar a classificação, analisar regiões sinalizadas, comparar o resultado da IA com a imagem original e utilizar as informações como apoio à avaliação médica. | Fluxo curto e direto, com poucos passos. Destacar resultado, evidência visual e informações relevantes, evitando sobrecarga de dados. |
-| Equipamentos | Computador utilizado no ambiente clínico, com monitor adequado para visualização de imagens médicas. | Interface responsiva à resolução do monitor, boa legibilidade e visualização ampliada das imagens. Controles de zoom e navegação devem ser simples. |
-| Ambiente físico | Consultório, clínica, hospital ou centro de diagnóstico. O profissional pode trabalhar em períodos de alta demanda, com interrupções e pouco tempo disponível. | Priorizar velocidade, legibilidade e simplicidade. Informações importantes devem estar disponíveis sem exigir navegação excessiva. |
-| Ambiente social/organizacional | O software está inserido em um contexto de saúde no qual os resultados podem ser discutidos ou validados por diferentes profissionais. A decisão final permanece associada à avaliação médica. | Deixar clara a distinção entre resultado do modelo e decisão profissional. Facilitar o compartilhamento/registro dos resultados quando aplicável. |
-| Papéis/permissões/governança | O médico possui papel de avaliador e tomador de decisão clínica. O sistema atua como ferramenta de apoio e não deve substituir o julgamento profissional. | Apresentar resultados de forma transparente, registrar análises quando necessário e indicar limitações/incertezas do modelo. Diferenciar claramente predição da IA de conclusão médica. |
-| Volume de dados/histórico | Pode haver grande quantidade de imagens e exames de diferentes pacientes, além de análises anteriores. O sistema precisa lidar com diferentes exames sem dificultar a localização do caso atual. | Oferecer identificação clara do paciente/exame, organização do histórico, busca e filtros. Evitar que informações de diferentes casos sejam confundidas. |
+| Usuários e tarefas | [H] O perfil inicialmente escolhido é o médico nefrologista (Entrega 1, seção 7.2). O objetivo proposto é avaliar a tomografia e considerar a indicação do modelo (seção 7.3); uso direto, tarefas e participação de radiologistas ou outros profissionais não foram validados (H02). | Confirmar quem recebe/fornece o exame, quem o interpreta e quem consulta a saída. Não definir permissões ou interfaces para outros perfis sem tarefa confirmada. |
+| Equipamentos e sistemas | [?] Dispositivo, monitor, software de visualização, documentos e sistemas usados simultaneamente não foram identificados. | Investigar equipamentos e alternância entre ferramentas antes de decidir resolução, zoom, integração ou transferência de dados. |
+| Ambiente físico | [?] Local de trabalho, privacidade, condições de visualização, interrupções e restrições de tempo são desconhecidos; alta demanda e pressão de tempo são hipóteses (H05). | Investigar condições reais e como elas afetam leitura, privacidade e retomada da tarefa; somente então definir requisitos ambientais. |
+| Ambiente social/organizacional | [?] Presença de colegas, colaboração, comunicação, regras institucionais e condições de compartilhamento não foram levantadas. | Identificar participantes e regras do fluxo antes de propor compartilhamento, registro ou acesso por múltiplos perfis. |
+| Papéis e governança | [H] A equipe propõe que a indicação do modelo seja considerada como apoio, sem equivaler à conclusão clínica (Entrega 1, seção 1.5; H03). Responsabilidades e governança reais não foram investigadas. | Verificar como a saída deve ser comunicada e diferenciada de uma decisão clínica; não presumir responsabilidades ou permissões além do escopo documentado. |
+| Volume de dados e histórico | [?] Quantidade de exames e necessidade de recuperar análises anteriores, buscar ou filtrar não foram confirmadas; a necessidade de histórico permanece hipótese (H07). | Não especificar histórico, busca ou filtros como requisito até validar a tarefa e seu contexto. |
 
 ## 4. Jornada do usuário - equipe
 
 **Persona:** P01  
-**Objetivo da jornada:** Utilizar o software de processamento de imagens como apoio à análise de exames renais, obtendo uma classificação e evidências visuais que permitam ao médico validar o resultado.  
-**Início e fim da jornada:** Inicia quando o médico precisa analisar uma imagem/exame renal e termina quando ele interpreta e valida o resultado apresentado pelo sistema, utilizando-o como informação complementar à sua avaliação clínica.
+**Objetivo da jornada:** Explorar, provisoriamente, como o perfil escolhido poderia considerar a classificação de uma tomografia renal ao avaliar possíveis achados. A necessidade, a forma de entrada do exame e o papel da explicação ainda dependem de validação (H01, H02, H06).
+**Início e fim da jornada:** Começa com a necessidade proposta de avaliar uma tomografia e inclui uma etapa pós-interface para investigar o que acontece após a consulta ao resultado. O fluxo descrito é uma hipótese baseada em H02, não uma jornada observada; ações clínicas posteriores permanecem desconhecidas.
 
 | Etapa | Situação/ação | Objetivo | Pensamento/emoção | Dor | Oportunidade de design | Evidência |
 |---|---|---|---|---|---|---|
-| 1 - Receber o exame | Mário recebe ou acessa o exame de imagem de um paciente. | Identificar o exame que precisa ser analisado. | “Preciso avaliar esse exame e verificar se há alguma alteração.” - Concentrado / pressionado pelo tempo. | Grande volume de exames e pouco tempo disponível. | Facilitar acesso e identificação do exame, com informações claras do paciente e do estudo. | [H] volume de exames e pressão de tempo fazem parte da rotina clínica. |
-| 2 - Selecionar a imagem | Localiza e seleciona as imagens que serão analisadas pelo sistema. | Enviar o exame correto para processamento. | “Preciso ter certeza de que estou analisando o exame correto.” - Atento. | Risco de selecionar uma imagem ou exame incorreto. | Exibir identificação clara do paciente, exame e data antes do processamento. | [F] identificação correta do exame é necessária em ambientes clínicos. |
-| 3 - Processar imagens | Solicita ao sistema a análise da imagem. | Obter uma avaliação automatizada. | “Espero que a análise seja rápida.” - Expectativa / curiosidade. | Espera ou processos com muitas etapas podem interromper o fluxo de trabalho. | Feedback visual de processamento e indicação clara do estado da análise. | [H] rapidez e feedback são importantes para adoção da ferramenta. |
-| 4 - Visualizar o resultado | O sistema apresenta a classificação gerada pelo modelo. | Identificar se o exame apresenta indícios de alteração. | “O sistema identificou alguma alteração?” - Atento / cauteloso. | Uma classificação isolada pode ser insuficiente para gerar confiança. | Destacar o resultado de forma objetiva, juntamente com indicadores de confiança e informações relevantes. | [F] profissionais precisam contextualizar a predição antes de utilizá-la. |
-| 5 - Investigar a evidência | Mário visualiza a região da imagem destacada pelo sistema. | Entender quais características contribuíram para o resultado. | “Por que o sistema chegou a essa conclusão?” - Questionador. | Resultado do modelo pode parecer uma “caixa-preta”. | Enfatizar o uso de mapas de atenção/Grad-CAM sobre a imagem original para indicar as regiões relevantes. | [H] explicabilidade pode aumentar a compreensão e a confiança no resultado. |
-| 6 - Comparar com sua avaliação | Compara a indicação do modelo com sua própria análise e demais informações disponíveis. | Validar ou questionar o resultado apresentado. | “Isso faz sentido considerando o que estou vendo?” - Crítico / analítico. | Possível divergência entre a avaliação médica e o modelo. | Permitir visualização lado a lado da imagem original e da evidência gerada pelo modelo. | [F] o médico deve manter o controle sobre a interpretação final. |
-| 7 - Tomar uma decisão | Considera o resultado do sistema como informação complementar à avaliação clínica. | Incorporar ou desconsiderar a indicação do modelo. | “Vou considerar essa informação junto aos demais dados do paciente.” - Seguro / responsável. | Risco de interpretar a predição como diagnóstico definitivo. | Deixar explícito que o sistema fornece apoio à decisão, não substituição da avaliação médica. | [F] a decisão clínica permanece sob responsabilidade do profissional. |
-| 8 - Encerrar/registrar análise | Finaliza a análise e, quando aplicável, registra ou consulta posteriormente o resultado. | Manter histórico e rastreabilidade da análise. | “Preciso conseguir recuperar essa informação depois.” - Objetivo. | Perder resultados ou dificultar sua recuperação. | Histórico organizado, identificação do exame e registro dos resultados das análises. | [H] rastreabilidade é relevante em sistemas utilizados no contexto clínico. |
+| 1 - Necessidade de avaliar | [H] O recorte propõe que o perfil priorizado precise avaliar uma tomografia renal. | Identificar o exame relacionado à atividade. | [H] Como essa necessidade surge no fluxo real? | [?] Origem, encaminhamento e contexto do exame são desconhecidos. | Investigar o início real da atividade e os participantes. | [H] objetivo proposto na Entrega 1, seção 7.3; fluxo a validar (H02). |
+| 2 - Acesso ao exame | [H] O fluxo pode envolver receber, acessar ou selecionar um exame; não se assume envio manual. | Ter acesso ao exame que será avaliado. | [?] Quem fornece o exame e por qual sistema ou meio? | [?] Etapa e possíveis erros não foram observados. | Investigar origem, formato, identificação e transferência do exame. | [H] fluxo de fornecimento pendente (H02); detalhes desconhecidos. |
+| 3 - Processamento | [H] No recorte proposto, o modelo classifica imagens de tomografias renais. | Obter a saída técnica produzida pelo modelo. | [?] Como a análise é iniciada e quanto tempo leva? | [?] Espera, falhas e interrupções não foram investigadas. | Verificar o fluxo real e se o estado do processamento precisa ser comunicado. | [F] classificação de imagens renais é capacidade declarada (Entrega 1, seções 0.4 e 1.3); interação e tempo não definidos (H02). |
+| 4 - Consulta à saída | [H] O resultado proposto inclui uma classificação; demais elementos dependem do modelo e da investigação. | Compreender o que foi produzido, sem presumir significado clínico. | [?] Que informação é apresentada e como é interpretada? | [?] Compreensão e utilidade não foram avaliadas. | Investigar quais elementos e explicações são necessários; não presumir indicador de confiança. | [F] modelo classificador declarado na Entrega 1, seções 0.4 e 1.3; apresentação e compreensão pendentes (H01, H06). |
+| 5 - Examinar a explicação | [H] P01 poderia consultar uma explicação associada à classificação, caso ela seja produzida e útil. | Investigar o que a explicação permite compreender. | [?] Que tipo de explicação é compreensível e relevante? | [?] Não se sabe se a explicação ajuda, não altera ou dificulta a interpretação. | Validar método, apresentação e compreensão; não tratar explicabilidade como confiança. | [H] H01 e H06; utilidade e forma da explicação não demonstradas. |
+| 6 - Relacionar à avaliação | [H] O recorte propõe considerar a indicação junto à tomografia e à avaliação profissional. | Investigar se e como a indicação é comparada com outras informações. | [?] O que ocorre quando a indicação diverge da avaliação? | [?] Divergências e estratégias de resolução não foram observadas. | Investigar a tarefa antes de definir comparação lado a lado ou outro recurso. | [H] hipótese associada a H01 e H03; atividade real a validar. |
+| 7 - Decidir como prosseguir | [H] A equipe propõe a indicação como informação de apoio, não como conclusão clínica. | Descobrir se a informação influencia uma decisão ou ação posterior. | [?] O profissional usa, ignora ou encaminha a indicação? | [?] Consequências e responsabilidades no fluxo real são desconhecidas. | Distinguir a saída do modelo da decisão clínica, conforme validação de H03. | [F] intenção de apoio declarada na Entrega 1, seção 1.5; uso e efeito não demonstrados (H03). |
+| 8 - Encerrar a consulta à interface | [?] Não foi definido se o resultado é registrado, exportado, comunicado ou recuperado depois. | Identificar o que encerra o uso da interface. | [?] O que precisa ser preservado e por quem? | [?] Necessidade de histórico ou registro não confirmada (H07). | Investigar destino da informação antes de projetar histórico, exportação ou compartilhamento. | [?] Lacuna; H07 pendente. |
+| 9 - Pós-uso: atividade subsequente | [?] O que o profissional faz no mundo real após consultar ou não a saída do modelo ainda não é conhecido. | Identificar eventual comunicação, registro, revisão ou próximo passo clínico e o benefício obtido. | [?] A informação altera a atividade seguinte? | [?] Não há evidência sobre ações ou resultados após o uso. | Entrevistar/observar participantes do fluxo; só então representar consequências e requisitos de pós-uso. | [?] Lacuna de investigação; não atribuir uma ação ou benefício sem evidência. |
 
 > A jornada pode incluir etapas **antes, durante e depois** do uso do produto. Não transforme a jornada em lista de telas.
 
 ## Síntese
 
-Quais necessidades e objetivos devem obrigatoriamente aparecer nos cenários e nas tarefas seguintes?
+Os cenários e tarefas seguintes devem preservar, como **proposta a validar**, o objetivo de avaliar uma tomografia renal e considerar a classificação do modelo para decidir como prosseguir com a avaliação (P01; Entrega 1, seção 7.3; H02). Devem investigar quem fornece/acessa o exame e por qual fluxo (H02), quais elementos da saída e da explicação são compreensíveis e úteis (H01, H06), como distinguir indicação automatizada de decisão clínica (H03) e o que ocorre após a consulta à interface, incluindo eventual comunicação, registro ou ação subsequente. Não tratar como fatos a rotina clínica, o upload manual, a pressão de tempo, a necessidade de histórico, as emoções atribuídas à persona ou qualquer benefício clínico.
 
 ## Checklist
 
