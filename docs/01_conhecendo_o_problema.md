@@ -105,7 +105,9 @@ Um sistema para auxílio do diagnóstico de patologias renais a partir do proces
 
 ## 1.2 Qual situação, atividade ou problema do mundo real motivou o TCC?
 
-[F] Entes próximos que foram acometidas por Doença Renal Crônica (DRC).
+[?] A situação concreta do processo clínico que motivaria a intervenção ainda não foi identificada. Será necessário investigar com profissionais como tomografias renais são avaliadas e se há dificuldades ou oportunidades relevantes nessa atividade.
+
+[F] A escolha do tema também foi motivada pela experiência pessoal da equipe com pessoas próximas acometidas por Doença Renal Crônica (DRC). Esse relato explica a motivação da equipe, mas não constitui evidência sobre o processo clínico.
 
 ## 1.3 Qual é a **capacidade/contribuição central** produzida pelo TCC?
 
@@ -115,12 +117,13 @@ Complete, se ajudar:
 
 Exemplos: otimizar consultas; classificar imagens; detectar anomalias; comparar modelos; identificar padrões; prever demanda; analisar desempenho; gerar resumos; recomendar configurações.
 
-O TCC melhora a aplicabilidade clínica, uma vez que tarefas de processamento de imagens normalmente demandam alto poder computacional, e também possui interpretabilidade, fundamental para garantir a confiabilidade do modelo proposto, viabilizando o seu uso.
+O TCC produz um modelo de redes convolucionais para classificar imagens de tomografias renais, com foco em eficiência computacional e análise de interpretabilidade.
 
 ## 1.4 O que se espera que esteja diferente **para pessoas, organizações ou processos** se essa contribuição for bem-sucedida?
 
-[F] Que a solução seja acessível;
-[F] Que patologias renais, normalmente diagnosticadas em estágios avançados, possam ter o diagnóstico antecipado.
+[H] Se o modelo demonstrar desempenho, eficiência e interpretabilidade adequados, poderá apoiar a análise de tomografias renais em contextos com recursos computacionais limitados; a acessibilidade e o benefício clínico ainda não foram demonstrados.
+
+[H] A possibilidade de contribuir para a identificação mais precoce de patologias renais é um benefício esperado, mas ainda não foi demonstrada por evidências desta entrega.
  
 
 ## 1.5 O que é mérito técnico/científico do TCC e o que seria uma possível aplicação prática?
@@ -137,7 +140,7 @@ O TCC melhora a aplicabilidade clínica, uma vez que tarefas de processamento de
 
 Se não houver interface prevista no TCC, escreva `NÃO SE APLICA AO ESCOPO ORIGINAL` e prossiga para 2.2.
 
-[F] Médicos
+[F] Perfil prioritário inicial definido pela equipe para o projeto de IHC: médico nefrologista. A adequação desse perfil ao uso da solução ainda será validada com profissionais.
 
 ## 2.2 Quem poderia **usar, configurar, administrar, operar, interpretar ou tomar decisões** a partir da contribuição técnica?
 
@@ -145,7 +148,7 @@ Considere perfis profissionais e stakeholders, não apenas consumidores finais.
 
 | Perfil | Relação com a contribuição | O que faria | Status/evidência |
 |---|---|---|---|
-| Médico radiologista ou especialista responsável pelo diagnóstico | Usuário direto e intérprete do resultado | Carregaria a tomografia, analisaria a indicação do modelo e a explicação associada, usando essas informações como apoio à decisão clínica | [H] - perfil a confirmar com profissionais |
+| Médico nefrologista | Usuário direto potencial e intérprete do resultado no recorte inicial | Poderia avaliar a tomografia e considerar os resultados do modelo ao decidir como prosseguir; quais informações consultaria e quem forneceria o exame ainda precisam ser investigados (H02, H06) | [H] - perfil escolhido inicialmente pela equipe, a confirmar com profissionais |
 | Pesquisador ou profissional de IA/ML | Responsável técnico pela avaliação do modelo | Configuraria versões do modelo, parâmetros e conjuntos de avaliação | [H] - cenário de adoção |
 | Profissional de TI ou administrador do serviço | Operação e manutenção da solução | Administraria acesso, disponibilidade e integração com o fluxo institucional | [H] - cenário de adoção |
 
@@ -159,9 +162,9 @@ Considere perfis profissionais e stakeholders, não apenas consumidores finais.
 
 Considere conhecimento do domínio, experiência tecnológica, frequência de uso, necessidades de acessibilidade, responsabilidade profissional, familiaridade com métricas, linguagem técnica, urgência etc.
 
-[H] H01 - O médico terá familiaridade com sistemas de visualização de exames, mas poderá não conhecer métricas de aprendizado de máquina; portanto, a interface deverá apresentar o resultado em linguagem clínica compreensível e permitir consultar detalhes técnicos quando necessário.
+[H] H04 - O médico nefrologista poderá ter familiaridade com sistemas de visualização de exames, mas não necessariamente com métricas de aprendizado de máquina; essa experiência e suas necessidades de apresentação ainda precisam ser investigadas.
 
-[H] H02 - O uso ocorrerá em um contexto profissional com responsabilidade sobre a decisão clínica, exigindo distinção clara entre a indicação do modelo e o diagnóstico final do médico.
+[H] H03 - O médico nefrologista distinguirá claramente a indicação do modelo do diagnóstico final; essa distinção e a forma de comunicar responsabilidades e limites precisam ser investigadas.
 
 [?] Ainda não se sabe a frequência de uso, o nível de experiência tecnológica dos profissionais, os requisitos de acessibilidade e quais termos clínicos são preferidos.
 
@@ -173,19 +176,19 @@ Considere conhecimento do domínio, experiência tecnológica, frequência de us
 
 Não responda “usar o algoritmo”, “clicar no sistema” ou “ver o dashboard”.
 
-[F] Obter auxílio diagnóstico de patologias renais em estágios iniciais, uma vez que os danos causados na estrutura dos rins nesses estágios normalmente não são visíveis a olho nu.
+[?] Ainda não há evidência nesta entrega sobre dificuldades específicas na avaliação de tomografias renais, nem sobre a possibilidade de identificar patologias em estágios iniciais. A atividade e as necessidades dos profissionais precisam ser investigadas.
 
 ## 3.2 Quais são as atividades mais importantes?
 
 | ID | Atividade/objetivo | Quem realiza | Frequência/criticidade inicial | Status/evidência |
 |---|---|---|---|---|
-| A01 | Selecionar e carregar uma tomografia computadorizada renal válida | Médico ou técnico autorizado | Frequente; depende do volume de exames | [H] - fluxo proposto a validar |
-| A02 | Consultar a classificação e a indicação de possível patologia | Médico | Frequente e alta criticidade | [H] - objetivo de uso a validar |
-| A03 | Interpretar a explicação do modelo e decidir como prosseguir com a avaliação clínica | Médico | Frequente e alta criticidade | [H] - objetivo de uso a validar |
+| A01 | Avaliar uma tomografia renal e interpretar possíveis achados | Médico nefrologista (perfil inicial) | Frequência e criticidade a investigar | [H] - atividade profissional a validar |
+| A02 | Decidir como prosseguir diante dos achados da avaliação | Médico nefrologista (perfil inicial) | Criticidade e processo decisório a investigar | [H] - atividade profissional a validar |
+| A03 | Interpretar a indicação e a explicação do modelo como apoio à avaliação clínica | Médico nefrologista (perfil inicial) | Frequência e criticidade a investigar | [H] - objetivo de uso proposto, a validar |
 
 ## 3.3 Qual atividade parece mais frequente? Por quê?
 
-[H] A seleção e o carregamento de exames tende a ser a atividade mais recorrente, pois inicia cada análise; 
+[?] Ainda não é possível determinar qual atividade é mais frequente; isso depende do volume de exames e da rotina profissional, que ainda não foram investigados.
 
 ## 3.4 Qual parece mais crítica? Que consequência existe se for mal executada?
 
@@ -199,8 +202,7 @@ Não responda “usar o algoritmo”, “clicar no sistema” ou “ver o dashbo
 
 Pode existir software concorrente, linha de comando, planilha, notebook, script, painel técnico, processo manual, consulta a logs, análise visual, troca de mensagens, decisão por especialista etc.
 
-[F] Processo manual;
-[F] Decisão por especialista.
+[?] A forma como os profissionais avaliam tomografias renais atualmente ainda não foi descrita nem sustentada por evidências nesta entrega. A avaliação visual e a decisão por especialista são possibilidades a investigar com profissionais.
 
 ## 4.2 O que é difícil, demorado, confuso, repetitivo, arriscado ou pouco transparente?
 
@@ -212,13 +214,13 @@ Pode existir software concorrente, linha de comando, planilha, notebook, script,
 
 ## 4.4 O que acontece quando a atividade falha ou quando o resultado é interpretado incorretamente?
 
-[F] Um diagnóstico pode ser dado incorretamente.
+[H] Uma avaliação ou interpretação incorreta poderia contribuir para uma decisão clínica inadequada; a ocorrência, as consequências e os mecanismos de revisão precisam ser investigados.
 
 ## 4.5 Conte uma situação concreta.
 
 Escreva uma pequena narrativa com pessoa, objetivo, atividade, contexto, dificuldade e consequência. **Não descreva ainda a futura solução.**
 
-[H] H03 - Um médico recebe uma tomografia computadorizada durante sua rotina de atendimento e precisa avaliar se há sinais compatíveis com uma patologia. Ele observa as imagens e os contornos dos rins, mas trabalha sob pressão de tempo e pode ter dificuldade para identificar alterações sutis. Se a análise for incompleta ou o resultado for interpretado incorretamente, uma suspeita pode não ser investigada ou um diagnóstico pode ser feito de forma inadequada. A situação e suas condições reais ainda precisam ser confirmadas com profissionais.
+[H] H05 - Um médico recebe uma tomografia computadorizada durante sua rotina de atendimento e precisa avaliar se há sinais compatíveis com uma patologia. A rotina, a eventual pressão de tempo, a dificuldade para identificar alterações e as possíveis consequências de uma avaliação incompleta ainda são hipóteses a confirmar com profissionais.
 
 ## 4.6 Que evidência existe hoje?
 
@@ -233,7 +235,7 @@ Escreva uma pequena narrativa com pessoa, objetivo, atividade, contexto, dificul
 
 ## 5.1 Onde e em quais situações a interação poderia ocorrer?
 
-[H] O uso poderá ocorrer em hospitais, clínicas, laboratórios ou instituições de pesquisa, durante a avaliação de exames de pacientes. O contexto institucional exato ainda não foi definido.
+[H] O uso poderá ocorrer em hospitais, clínicas, laboratórios ou instituições de pesquisa, durante a avaliação de exames de pacientes. Ainda precisam ser investigados o contexto institucional, a rotina e as etapas da avaliação, os profissionais envolvidos, quem fornece o exame, os sistemas utilizados e as condições de trabalho. Essas possibilidades não definem requisitos da interface.
 
 ## 5.2 Em quais dispositivos/equipamentos?
 
@@ -243,9 +245,9 @@ Escreva uma pequena narrativa com pessoa, objetivo, atividade, contexto, dificul
 
 Considere iluminação, ruído, mobilidade, conexão, privacidade, uso compartilhado, interrupções, pressão de tempo etc.
 
-[H] O profissional poderá enfrentar interrupções, pressão de tempo, uso compartilhado do equipamento e necessidade de preservar a privacidade dos exames. 
+[H] O profissional poderá enfrentar interrupções, pressão de tempo, uso compartilhado do equipamento e necessidade de preservar a privacidade dos exames.
 
-[F] Imagens médicas são dados sensíveis no contexto da LGPD; os requisitos institucionais e técnicos de proteção ainda precisam ser detalhados.
+[F] Dados referentes à saúde são dados pessoais sensíveis conforme a LGPD (Lei nº 13.709/2018, art. 5º, II; referência em [`../BIBLIOGRAFIA.md`](../BIBLIOGRAFIA.md)). Os requisitos institucionais e técnicos de proteção ainda precisam ser detalhados.
 
 ## 5.4 Existem fatores sociais ou organizacionais?
 
@@ -259,7 +261,7 @@ Considere papéis, chefias, equipes, permissões, aprovação, responsabilidade 
 
 ## 5.6 Um erro pode produzir consequência relevante? Qual?
 
-[F] Sim, um diagnóstico incorreto.
+[H] Uma avaliação incorreta poderia contribuir para uma decisão clínica inadequada; a consequência concreta e os mecanismos de revisão ainda precisam ser investigados.
 
 ---
 
@@ -271,7 +273,7 @@ Considere papéis, chefias, equipes, permissões, aprovação, responsabilidade 
 
 | Alternativa atual | Quem usa | Para quê | Status/evidência |
 |---|---|---|---|
-| Avaliação visual e interpretação por profissional de saúde | Médico | Analisar as imagens e elaborar uma conclusão diagnóstica | [F] - processo tradicional |
+| Avaliação visual e interpretação por profissional de saúde | Médico | Analisar as imagens e elaborar uma conclusão diagnóstica | [H] - processo atual a confirmar com profissionais |
 | Sistemas de visualização e gestão de exames médicos | Médicos e equipes de saúde | Consultar, organizar e visualizar exames | [H] - alternativa e vocabulário a investigar |
 
 
@@ -329,7 +331,9 @@ Responda:
 
 ## 7.2 Qual perfil será priorizado no projeto de IHC?
 
-**Por que esse perfil foi escolhido?** {{...}}
+**Perfil prioritário inicial:** médico nefrologista.
+
+**Por que esse perfil foi escolhido?** A equipe escolheu inicialmente o nefrologista por ser o especialista médico dedicado ao diagnóstico, à prevenção e ao tratamento clínico das doenças do sistema urinário, com foco nos rins. Essa é uma decisão inicial de recorte, não uma confirmação de que esse profissional será o usuário da solução; a adequação do perfil e sua relação com a avaliação de tomografias precisam ser validadas com profissionais.
 
 ## 7.3 Qual objetivo desse usuário será priorizado?
 
@@ -339,9 +343,9 @@ Interpretar a indicação produzida pelo modelo em conjunto com a tomografia, co
 
 Complete:
 
-> **Para fins da disciplina de IHC, será projetada uma interface que permita a `médicos` utilizar a `classificação interpretável de tomografias renais produzida pelo modelo` para `analisar possíveis patologias e apoiar a decisão sobre a investigação do exame`, no contexto de `avaliação profissional de tomografias computadorizadas renais`.**
+> **Para fins da disciplina de IHC, será projetada uma interface que permita a `médicos nefrologistas` utilizar a `classificação de tomografias renais produzida pelo modelo e sua explicação` para `analisar possíveis patologias e decidir como prosseguir com a avaliação clínica`, no contexto de `avaliação profissional de tomografias computadorizadas renais`.**
 
-O recorte explorará o fluxo de entrada de uma tomografia, acompanhamento do processamento e leitura do resultado com sua explicação. A interface será tratada como parte prevista do sistema.
+O recorte proposto explora a entrada de uma tomografia, o acompanhamento do processamento e a leitura do resultado com sua explicação. O envio manual do exame é uma hipótese de interação (H02): ainda é necessário investigar quem fornece o exame, quais profissionais participam e se esse fluxo corresponde à prática existente ou se o exame chega por outro sistema.
 
 ## 7.5 Qual é a relação dessa interface com o TCC?
 
@@ -373,7 +377,7 @@ Marque apenas as que parecem plausíveis e explique o objetivo correspondente.
 | Explicabilidade/detalhamento | sim | Compreender quais regiões ou características influenciaram a indicação | [H] - interpretabilidade é contribuição declarada |
 | Administração/configurações globais | talvez | Manter configurações operacionais do serviço | [H] - depende de adoção institucional |
 | Usuários/perfis/permissões | talvez | Restringir acesso a exames e funções conforme responsabilidade | [H] - relevante por privacidade e governança |
-| CRUD de entidade do domínio | não inicialmente | Não há entidade administrativa necessária no recorte atual | [F] - não deriva de uma tarefa já identificada |
+| CRUD de entidade do domínio | não inicialmente | Nenhuma tarefa administrativa foi identificada no recorte inicial | [H] - rever se a investigação apontar essa necessidade |
 | Auditoria/logs | talvez | Rastrear processamento, versão do modelo e acesso aos resultados | [H] - relevância provável, ainda não validada |
 | Alertas/ocorrências | talvez | Informar falhas, resultado inconclusivo ou necessidade de revisão | [H] - depende dos modos de falha confirmados |
 | Ajuda/documentação | sim | Explicar termos, limitações e interpretação responsável do resultado | [H] - necessário para reduzir ambiguidades |
@@ -388,16 +392,18 @@ Marque apenas as que parecem plausíveis e explique o objetivo correspondente.
 
 | Benefício esperado | Problema/necessidade | Usuário | Status/evidência |
 |---|---|---|---|
-| Apoiar a análise de tomografias renais com uma indicação interpretável | Processo manual sujeito a limitações e risco de interpretação incorreta | Médico | [H] - contribuição e problema declarados |
+| Investigar se uma indicação interpretável pode apoiar a avaliação de tomografias renais | Necessidade e dificuldades no processo atual ainda não foram confirmadas | Médico nefrologista (perfil inicial) | [H] - benefício a validar com profissionais |
 
 ## 9.2 Que ações o usuário deverá conseguir realizar?
 
 | ID | O usuário precisa conseguir... | Para alcançar... | Prioridade inicial |
 |---|---|---|---|
-| F01 | Carregar uma tomografia renal e confirmar os dados do exame | Iniciar uma análise válida | alta |
+| F01 | Fornecer uma tomografia renal válida à solução, por forma de entrada ainda a confirmar | Iniciar uma análise válida | alta |
 | F02 | Acompanhar o processamento e identificar falhas | Saber quando o resultado está disponível ou precisa de correção | alta |
-| F03 | Consultar a classificação, a confiança e a explicação do modelo | Interpretar a indicação como apoio à avaliação médica | alta |
+| F03 | Consultar os elementos do resultado que a investigação confirmar como necessários, distinguindo classificação do modelo, eventual medida de confiança e explicação | Interpretar a indicação como apoio à avaliação médica, sem confundi-la com a conclusão clínica | proposta; validar H01, H03 e H06 |
 | F04 | Registrar ou comunicar a conclusão da avaliação | Dar continuidade ao atendimento com rastreabilidade adequada | média |
+
+Classificação, medida de confiança, explicação do modelo e conclusão clínica são elementos distintos. Ainda não foi confirmado quais deles são produzidos pelo TCC, quais seriam úteis ao nefrologista, como seriam interpretados ou se deveriam aparecer na interface. Em particular, a presença de uma explicação não garante que ela seja compreendida ou considerada útil, e uma medida de confiança não deve ser presumida como necessária ou autoexplicativa. Investigar essas questões antes de defini-las como requisitos (H01, H03, H06).
 
 ## 9.3 Tecnologias/restrições já definidas no TCC
 
@@ -405,8 +411,8 @@ A tecnologia aparece **agora**, depois do entendimento do uso.
 
 | Tecnologia/restrição | Por que existe | Possível impacto na interação |
 |---|---|---|
-| Modelo de IA baseado em redes convolucionais | Detectar/classificar patologias em imagens renais com baixo custo computacional | Pode exigir mensagens de processamento, indicação de limitações e apresentação cuidadosa da confiança |
-| Interpretabilidade do modelo | Permitir compreender os fatores associados ao resultado | Exige visualização ou descrição explicativa que não seja confundida com prova diagnóstica |
+| Modelo de IA baseado em redes convolucionais | Detectar/classificar patologias em imagens renais com baixo custo computacional | Se houver medida de confiança entre as saídas do modelo, sua necessidade, compreensão e forma de apresentação deverão ser investigadas; também será necessário comunicar limitações relevantes |
+| Interpretabilidade do modelo | Analisar fatores associados ao resultado, conforme o método definido no TCC | A forma de explicação, sua apresentação e compreensão pelo nefrologista precisam ser investigadas; não deve ser presumida como prova diagnóstica |
 | Dados de tomografia computadorizada | São a entrada necessária para o modelo | Exige validação de formato, qualidade, privacidade e identificação do exame |
 
 ---
@@ -415,9 +421,12 @@ A tecnologia aparece **agora**, depois do entendimento do uso.
 
 | ID | Hipótese/dúvida | Por que importa | Como poderá ser investigada |
 |---|---|---|---|
-| H01 | Médicos compreenderão e considerarão útil uma explicação do resultado do modelo apresentada junto à imagem | A aceitação depende da compreensão e da confiança na indicação | Entrega 3/7 |
-| H02 | O fluxo de upload, processamento e resultado representa uma atividade real e relevante no contexto profissional | Define o recorte de IHC e evita criar telas sem tarefa correspondente | Entrega 3/4/5 |
-| H03 | O médico distinguirá claramente a indicação do modelo do diagnóstico final | Um erro de interpretação pode produzir consequência clínica relevante | Entrega 4/7/8 |
+| H01 | Médicos nefrologistas compreenderão e considerarão útil uma explicação do resultado do modelo apresentada junto à imagem | A compreensão e a utilidade precisam ser verificadas; interpretabilidade não garante compreensão, utilidade ou confiança | Entrega 3/7 |
+| H02 | O fluxo de fornecimento do exame, processamento e resultado representa uma atividade real e relevante no contexto profissional; é necessário descobrir quem fornece o exame e por qual meio | Define o recorte de IHC e os papéis envolvidos sem pressupor upload manual | Entrega 3/4/5 |
+| H03 | O médico nefrologista distinguirá claramente a indicação do modelo do diagnóstico final | Uma interpretação equivocada poderia afetar a avaliação clínica; a consequência concreta precisa ser investigada | Entrega 4/7/8 |
+| H04 | O médico nefrologista poderá ter familiaridade com sistemas de visualização de exames, mas não necessariamente com métricas de aprendizado de máquina | A experiência e as necessidades de apresentação podem orientar o vocabulário e o nível de detalhe | Entrega 3/7 |
+| H05 | A rotina de avaliação de tomografias poderá envolver pressão de tempo ou dificuldade para identificar alterações sutis; instituição, etapas, papéis, sistemas e condições ainda são desconhecidos | O contexto e as dificuldades reais podem alterar o problema e o recorte de IHC | Entrega 3/4 |
+| H06 | Classificação, medida de confiança e explicação do modelo são elementos distintos; quais são produzidos, necessários e compreendidos pelo nefrologista ainda precisa ser investigado | Evita tratar elementos diferentes como equivalentes ou presumir que todos devam ser apresentados na interface | Entrega 3/7 |
 
 Registre em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 
@@ -429,20 +438,23 @@ Registre em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 |---|---|
 | Qual é a contribuição central do TCC? | Classificar imagens de tomografias renais com baixo custo computacional e oferecer interpretabilidade para apoiar a aplicabilidade clínica. |
 | O TCC já previa interface? | Sim; a forma final da interface ainda precisa ser detalhada. |
-| Quem é o usuário prioritário de IHC? | Médico radiologista ou especialista responsável pela interpretação do exame. |
-| O que ele precisa alcançar? | Analisar a tomografia, compreender a indicação do modelo e decidir como prosseguir com a avaliação clínica. |
-| Qual problema/atividade será estudado? | O carregamento de tomografias e a interpretação de resultados de apoio ao diagnóstico. |
-| Como isso acontece hoje? | Por análise visual e decisão de especialista, em processo declarado como manual. |
-| Qual é o contexto de uso? | Ambiente profissional de saúde, com possível pressão de tempo, dados sensíveis e responsabilidade clínica. |
-| Que interface/recorte será explorado? | Entrada do exame, acompanhamento do processamento e resultado explicável. |
+| Quem é o usuário prioritário de IHC? | Médico nefrologista, escolhido inicialmente pela equipe; a adequação do perfil será validada com profissionais. |
+| O que ele precisa alcançar? | Como objetivo proposto, avaliar a tomografia, interpretar possíveis achados e decidir como prosseguir; a atividade real será investigada. |
+| Qual problema/atividade será estudado? | A avaliação profissional de tomografias renais; dificuldades e processo atual ainda precisam ser investigados. |
+| Como isso acontece hoje? | Ainda não há evidência suficiente nesta entrega para descrever o processo atual. |
+| Qual é o contexto de uso? | Avaliação profissional de tomografias renais; instituição, rotina, etapas, papéis, sistemas e condições específicas ainda precisam ser investigados. |
+| Que interface/recorte será explorado? | Recorte inicial proposto: fornecimento do exame, acompanhamento do processamento e consulta ao resultado; forma de entrada e elementos a apresentar permanecem nas hipóteses H02 e H06. |
 | Como a interface se relaciona ao TCC? | É uma interface prevista no sistema descrito e será refinada como recorte de IHC; a implementação no TCC ainda depende de decisão. |
-| Quais pontos ainda são hipóteses? | H01, H02, H03 e as demais afirmações marcadas `[H]`; ainda faltam dados com médicos e levantamento de alternativas. |
+| Quais pontos ainda são hipóteses? | H01–H06 e as demais afirmações marcadas `[H]`; ainda faltam dados com profissionais e levantamento de alternativas. |
 
 ### Delimitação
 
-**Dentro do escopo de IHC:** investigar, modelar, prototipar e avaliar o fluxo de carregamento de tomografias, acompanhamento do processamento e interpretação explicável do resultado por médicos.  
-**Fora do escopo de IHC:** desenvolver toda a infraestrutura clínica, validar o modelo em larga escala, definir protocolos médicos, substituir o diagnóstico profissional, integrar todos os sistemas hospitalares e criar uma área administrativa completa.  
-**Dentro do escopo formal do TCC:** desenvolver e avaliar o modelo de detecção/classificação de patologias renais em tomografias, considerando desempenho, eficiência computacional e interpretabilidade, conforme o escopo declarado pela equipe.  
+**Dentro do escopo de IHC:** investigar, modelar, prototipar e avaliar o recorte inicial proposto de fornecimento do exame, acompanhamento do processamento e consulta ao resultado por médicos nefrologistas; o fluxo e os elementos do resultado ainda serão validados (H02, H06).
+
+**Fora do escopo de IHC:** desenvolver toda a infraestrutura clínica, validar o modelo em larga escala, definir protocolos médicos, substituir o diagnóstico profissional, integrar todos os sistemas hospitalares e criar uma área administrativa completa.
+
+**Dentro do escopo formal do TCC:** desenvolver e avaliar o modelo de detecção/classificação de patologias renais em tomografias, considerando desempenho, eficiência computacional e interpretabilidade, conforme o escopo declarado pela equipe.
+
 **Interface da disciplina será implementada no TCC?** não definido - a interface é um recorte previsto para a disciplina e sua incorporação ao TCC depende de decisão da equipe e da orientadora.
 
 ---
@@ -467,9 +479,9 @@ A Entrega 1 é uma **fotografia inicial do conhecimento**. Ela pode e deve ser r
 
 Prepare uma explicação de até três frases:
 
-1. **Problema/atividade humana:** Médicos precisam analisar tomografias renais e identificar possíveis patologias, inclusive alterações que podem ser difíceis de perceber em uma análise manual.
+1. **Problema/atividade humana:** A avaliação profissional de tomografias renais e as dificuldades enfrentadas nessa atividade ainda precisam ser investigadas; a equipe não dispõe de evidência para afirmar que alterações sejam difíceis de perceber ou que haja pressão de tempo.
 2. **Contribuição técnica do TCC:** Um modelo de redes convolucionais classifica imagens renais buscando baixo custo computacional e interpretabilidade.
-3. **Como uma pessoa poderia utilizar essa contribuição:** Um médico poderia carregar uma tomografia, consultar a indicação e a explicação do modelo e usar essas informações como apoio, sem substituir sua avaliação clínica.
+3. **Como uma pessoa poderia utilizar essa contribuição:** Um médico nefrologista poderia consultar a indicação e a explicação do modelo como apoio à avaliação clínica; a forma de entrada do exame ainda é uma hipótese a validar.
 
 Essa síntese ajuda a apresentar o projeto para público não especializado sem reduzir seu mérito técnico.
 
