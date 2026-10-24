@@ -8,16 +8,16 @@ Para projetos cujo TCC não previa interface, esta matriz é especialmente impor
 
 | Elemento | Registro da equipe | Evidência/justificativa | Estado |
 |---|---|---|---|
-| Tema do TCC | {{...}} | {{documento/TCC}} | definido |
-| Resultado técnico esperado | {{algoritmo, análise, sistema, modelo, API...}} | {{...}} | definido |
-| O TCC previa interface? | sim / não / parcialmente | {{...}} | definido |
-| Capacidade/contribuição central | {{o que a tecnologia permite}} | {{...}} | definido |
-| Possíveis beneficiários/stakeholders | {{...}} | {{fonte ou hipótese}} | F / H / ? |
-| Usuário escolhido para IHC | {{...}} | {{por que esse perfil}} | F / H / ? |
-| Objetivo principal do usuário | {{...}} | {{...}} | F / H / ? |
-| Contexto de uso adotado | {{...}} | {{...}} | F / H / ? |
-| Interface/recorte de IHC | {{...}} | {{como deriva dos itens acima}} | proposta / revisada |
-| Relação com o TCC | parte prevista / extensão conceitual / protótipo demonstrativo / outra | {{...}} | definido |
+| Tema do TCC | Detecção de patologias renais em tomografia computadorizada por meio de redes convolucionais de baixo custo computacional | Título declarado na Entrega 1, seção 0.2 | definido |
+| Resultado técnico esperado | Modelo de IA/ML para classificação de imagens médicas renais | Declaração da equipe na Entrega 1, seções 0.4 e 1.5 | definido |
+| O TCC previa interface? | Sim, conforme declaração atual da equipe | Entrega 1, seções 0.5 e 7.5; a implementação da interface no TCC ainda não está decidida | definido como declaração da equipe |
+| Capacidade/contribuição central | Classificar imagens de tomografias renais com redes convolucionais, com foco em eficiência computacional e análise de interpretabilidade | Entrega 1, seções 1.3 e 1.5 | definido como escopo declarado |
+| Possíveis beneficiários/stakeholders | Médicos nefrologistas, pacientes, profissionais de IA/ML e profissionais de TI/administração | Perfis e impactos propostos na Entrega 1, seções 2.2–2.3; adoção e papéis são hipóteses | H |
+| Usuário escolhido para IHC | Médico nefrologista, escolhido inicialmente pela equipe por sua especialização em doenças do sistema urinário, com foco nos rins | Decisão inicial registrada na Entrega 1, seção 7.2; adequação ao uso da solução precisa ser validada com profissionais | H |
+| Objetivo principal do usuário | Avaliar uma tomografia renal, interpretar possíveis achados e decidir como prosseguir com a avaliação clínica, considerando a indicação do modelo como apoio | Objetivo proposto na Entrega 1, seções 3.2 e 7.3; atividade real e uso do modelo precisam ser validados | H |
+| Contexto de uso adotado | Avaliação profissional de tomografias computadorizadas renais; instituição, rotina e fluxo específicos ainda não definidos | Entrega 1, seções 5.1 e 7.4; contexto proposto a investigar | H |
+| Interface/recorte de IHC | Fornecimento do exame, acompanhamento do processamento e consulta aos elementos do resultado que a investigação confirmar como necessários; envio manual e elementos a apresentar não estão definidos | Deriva da capacidade técnica e do objetivo proposto; validar H02 e H06 na Entrega 1, seção 10 | proposta; fluxo e informações a validar |
+| Relação com o TCC | Interface declarada como prevista no sistema descrito; o recorte da disciplina é um artefato de aprendizagem de IHC e sua implementação no TCC depende de decisão posterior da equipe e da orientadora | Entrega 1, seções 0.5, 7.5 e delimitação | definido como declaração da equipe |
 
 > Se o escopo de IHC mudar ao longo do semestre, preserve a decisão anterior no histórico e registre **qual evidência motivou a mudança**.
 
@@ -27,9 +27,12 @@ Use esta tabela para itens importantes marcados como `[H]` ou `[?]`. Preserve o 
 
 | ID | Afirmação / dúvida inicial | Tipo | Por que importa | Como/onde investigar | Evidência obtida | Estado atual | Impacto no projeto |
 |---|---|---|---|---|---|---|---|
-| H01 | Médicos compreenderão e considerarão útil uma explicação do resultado do modelo apresentada junto à imagem | H | A aceitação depende da compreensão e da confiança na indicação | Entrega 3 / 7 | PENDENTE — investigar com médicos | aberta | Pode orientar a forma de apresentar explicações e detalhes técnicos |
-| H02 | O fluxo de upload, processamento e resultado representa uma atividade real e relevante no contexto profissional | H | Define o recorte de IHC e evita criar telas sem tarefa correspondente | Entrega 3 / 4 / 5 | PENDENTE — investigar com médicos | aberta | Pode confirmar ou alterar o fluxo priorizado |
-| H03 | O médico distinguirá claramente a indicação do modelo do diagnóstico final | H | Um erro de interpretação pode produzir consequência clínica relevante | Entrega 4 / 7 / 8 | PENDENTE — investigar com médicos | aberta | Exige comunicação clara das limitações e da responsabilidade profissional |
+| H01 | Médicos nefrologistas compreenderão e considerarão útil uma explicação do resultado do modelo apresentada junto à imagem | H | A compreensão e a utilidade precisam ser verificadas; interpretabilidade não garante compreensão, utilidade ou confiança | Entrega 3 / 7 | PENDENTE — investigar com médicos nefrologistas | aberta | Pode orientar a forma de apresentar explicações e detalhes técnicos |
+| H02 | O fluxo de fornecimento do exame, processamento e resultado representa uma atividade real e relevante no contexto profissional; é necessário descobrir quem fornece o exame e por qual meio | H | Define o recorte de IHC e os papéis envolvidos sem pressupor upload manual | Entrega 3 / 4 / 5 | PENDENTE — investigar com profissionais envolvidos no fluxo do exame | aberta | Pode confirmar ou alterar o fluxo priorizado e os perfis envolvidos |
+| H03 | O médico nefrologista distinguirá claramente a indicação do modelo do diagnóstico final | H | Uma interpretação equivocada poderia afetar a avaliação clínica; a consequência concreta precisa ser investigada | Entrega 4 / 7 / 8 | PENDENTE — investigar com médicos nefrologistas | aberta | Exige comunicação clara das limitações e da responsabilidade profissional |
+| H04 | O médico nefrologista poderá ter familiaridade com sistemas de visualização de exames, mas não necessariamente com métricas de aprendizado de máquina | H | A experiência e as necessidades de apresentação podem orientar o vocabulário e o nível de detalhe | Entrega 3 / 7 | PENDENTE — investigar com médicos nefrologistas | aberta | Pode orientar o vocabulário e o nível de detalhe da interface |
+| H05 | A rotina de avaliação de tomografias poderá envolver pressão de tempo ou dificuldade para identificar alterações sutis; instituição, etapas, papéis, sistemas e condições ainda são desconhecidos | H | O contexto e as dificuldades reais podem alterar o problema e o recorte de IHC | Entrega 3 / 4 | PENDENTE — investigar com profissionais envolvidos na avaliação do exame | aberta | Pode confirmar, alterar ou refutar a situação de uso descrita |
+| H06 | Classificação, medida de confiança e explicação do modelo são elementos distintos; quais são produzidos, necessários e compreendidos pelo nefrologista ainda precisa ser investigado | H | Evita tratar elementos diferentes como equivalentes ou presumir que todos devam ser apresentados na interface | Entrega 3 / 7 | PENDENTE — investigar com médicos nefrologistas | aberta | Pode definir quais informações serão apresentadas e como serão diferenciadas da conclusão clínica |
 
 ## 3. Rastreabilidade entre contribuição técnica, necessidades e artefatos
 
