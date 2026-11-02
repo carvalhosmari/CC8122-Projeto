@@ -1,7 +1,7 @@
 # Entrega 5 — Análise de tarefas: HTA, GOMS e CTT
 
-**Data:** {{dd/mm/aaaa}}  
-**Status:** ⬜ não iniciada  
+**Data:** 02/11/2026  
+**Status:** 🟨 em andamento  
 **Responsabilidade:** cada integrante modela pelo menos 1 HTA, 1 GOMS e 1 CTT. As três técnicas podem abordar a mesma funcionalidade ou funcionalidades distintas, conforme a orientação da disciplina.
 
 ## Objetivo da atividade
@@ -29,15 +29,15 @@ Um CRUD pode gerar tarefas relevantes, mas “cadastrar usuário” só merece m
 
 | ID | Tarefa | Persona/cenário de origem | Frequência/criticidade | Autor responsável |
 |---|---|---|---|---|
-| T01 | {{...}} | {{P01/C01}} | {{...}} | {{...}} |
+| T01 | Avaliar tomografia | P01/C01 | {{...}} | {{...}} |
 
 > Priorize tarefas necessárias para que o usuário alcance objetivos centrais. Não desperdice a modelagem em ações triviais isoladas, como “clicar em login”, se o objetivo relevante é maior. Da mesma forma, não modele o funcionamento interno do algoritmo como se fosse uma tarefa humana.
 
 ---
 
-## HTA — T01 {{nome da tarefa}}
+## HTA — T01 Avaliar tomografia
 
-**Autor(a):** {{nome — matrícula}}
+**Autor(a):** Mariane S. Carvalho — RA: 22.123.105-3
 
 ### Descrição da tarefa
 
@@ -51,7 +51,17 @@ Um CRUD pode gerar tarefas relevantes, mas “cadastrar usuário” só merece m
 
 | ID | Objetivo/operação | Plano/ordem | Problema ou decisão de design observada |
 |---|---|---|---|
-| 0 | {{objetivo principal}} | {{1 }} 2 > 3 / 1 ou 2 etc.> | {{...}} |
+| 0. | Avaliar tomografia 1 > 2 | Fazer login **E DEPOIS** Selecionar imagens |  |
+| 1. | Fazer login 1 + 2 | Informar usuário **E** Informar senha |  |
+| 1.1. | Informar usuário |  |  |
+| 1.2. | Informar senha |  |  |
+| 2. | Selecionar imagens 1 / 2 | Fazer upload **OU** selecionar paciente |  |
+| 2.1. | Fazer upload 1 / 2 | Selecionar localmente **OU** arrastar imagens |  |
+| 2.1.1. | Selecionar localmente |  |  |
+| 2.1.2. | Arrastar imagens |  |  |
+| 2.2. | Selecionar paciente 1 / 2 | Informar nome e cpf **OU** informar prontuário |  |
+| 2.2.1. | Informar nome e cpf |  |  |
+| 2.2.2. | Informar prontuário |  |  |
 
 **Verificação do HTA:**
 
@@ -62,29 +72,40 @@ Um CRUD pode gerar tarefas relevantes, mas “cadastrar usuário” só merece m
 
 ---
 
-## GOMS — T02 {{nome da tarefa}}
+## GOMS — T01 Avaliar tomografia
 
-**Autor(a):** {{nome — matrícula}}
+**Autor(a):** Mariane S. Carvalho — RA: 22.123.105-3
 
 ### Goal
 
-`G0: {{meta do usuário}}`
+`G0: Fazer upload das imagens`
 
 ### Métodos, operadores e regras de seleção
 
-- **Method M1:** {{...}}
-  - Operators: {{perceber, apontar, clicar, digitar, decidir... conforme o nível adotado}}
-- **Method M2:** {{...}}
-  - Operators: {{...}}
-- **Selection Rule SR1:** usar M1 quando {{condição}}; usar M2 quando {{condição}}.
+- **Method M1:** Selecionar localmente
+  - Operators: 
+    - Clicar no botão de upload
+    - Aguardar abertura do explorador de arquivos
+    - Navegar até o diretório desejado
+    - Selecionar as imagens
+    - Confirmar a seleção
+    - Aguardar o carregamento
+- **Method M2:** Arrastar imagens
+  - Operators: 
+    - Localizar as imagens no computador
+    - Selecionar os arquivos
+    - Arrastar os arquivos até a área de upload
+    - Soltar os arquivos na área indicada
+    - Aguardar o carregamento
+- **Selection Rule SR1:** usar M1 quando preferência do usuário for utilizar o explorador de arquivos; usar M2 quando preferência do usuário for utilizar a funcionalidade de arrastar e soltar.
 
 > Não chame qualquer passo de “método”. Em GOMS, métodos são sequências alternativas capazes de atingir uma meta; regras de seleção explicam quando escolher entre eles.
 
 ---
 
-## CTT — T03 {{nome da tarefa}}
+## CTT — T01 Avaliar tomografia
 
-**Autor(a):** {{nome — matrícula}}
+**Autor(a):** Mariane S. Carvalho — RA: 22.123.105-3
 
 ### Descrição
 
@@ -92,7 +113,7 @@ Um CRUD pode gerar tarefas relevantes, mas “cadastrar usuário” só merece m
 
 ### Diagrama
 
-![CTT T03](../assets/05_tarefas/ctt_t03.svg)
+![CTT T01](../assets/05_tarefas/ctt_t01.svg)
 
 ### Legenda e relações temporais usadas
 
