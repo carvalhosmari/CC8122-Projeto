@@ -51,17 +51,12 @@ O objetivo é avaliar uma tomografia renal e decidir como prosseguir diante de p
 
 | ID | Objetivo/operação | Plano/ordem | Problema ou decisão de design observada |
 |---|---|---|---|
-| 0. | Avaliar tomografia 1 > 2 | Fazer login **E DEPOIS** Selecionar imagens | A decomposição ainda não representa a análise das imagens, a consideração da indicação do modelo nem a decisão de como prosseguir; login como pré-requisito também é uma hipótese a validar. |
-| 1. | Fazer login 1 + 2 | Informar usuário **E** Informar senha | Os dois dados são necessários no fluxo proposto, mas a autenticação e a ordem de preenchimento precisam ser validadas com o fluxo real. |
-| 1.1. | Informar usuário |  | Definir qual identificador é aceito e orientar o formato e os erros sem exigir dados além do necessário. |
-| 1.2. | Informar senha |  | A senha deve ser protegida na interface; mensagens de erro não devem expor credenciais. |
-| 2. | Selecionar imagens 1 / 2 | Fazer upload **OU** selecionar paciente | As alternativas precisam levar ao exame correto; validar se o fluxo real permite envio de arquivos, busca de paciente ou ambos. |
-| 2.1. | Fazer upload 1 / 2 | Selecionar localmente **OU** arrastar imagens | Especificar formatos e quantidade aceitos e informar validação e progresso do envio; esses requisitos ainda não foram definidos. |
-| 2.1.1. | Selecionar localmente |  | Orientar a seleção de arquivos aceitos e indicar quando a seleção ou o carregamento terminar. |
-| 2.1.2. | Arrastar imagens |  | Indicar a área de destino e confirmar o carregamento; oferecer também uma alternativa que não dependa de arrastar e soltar. |
-| 2.2. | Selecionar paciente 1 / 2 | Informar nome e cpf **OU** informar prontuário | A busca deve permitir localizar e confirmar o paciente correto sem expor dados pessoais desnecessariamente; validar os identificadores usados no fluxo real. |
-| 2.2.1. | Informar nome e cpf |  | Nome e CPF são dados pessoais; apresentar resultados de modo que o profissional confirme a identidade sem ambiguidade. |
-| 2.2.2. | Informar prontuário |  | Orientar o formato do identificador e informar claramente quando não houver correspondência ou houver mais de uma. |
+| 0. | Avaliar tomografia 1 > 2 | Selecionar imagens **E DEPOIS** Gerar resultado | A decomposição ainda não representa a análise das imagens, a consideração da indicação do modelo nem a decisão de como prosseguir; login como pré-requisito também é uma hipótese a validar. |
+| 1. | Selecionar imagens | Selecionar paciente | As alternativas precisam levar ao exame correto; validar se o fluxo real permite envio de arquivos, busca de paciente ou ambos. |
+| 1.1. | Selecionar paciente 1 / 2 | Informar nome e cpf **OU** informar prontuário | A busca deve permitir localizar e confirmar o paciente correto sem expor dados pessoais desnecessariamente; validar os identificadores usados no fluxo real. |
+| 1.1.1. | Informar nome e cpf |  | Nome e CPF são dados pessoais; apresentar resultados de modo que o profissional confirme a identidade sem ambiguidade. |
+| 1.1.2. | Informar prontuário |  | Orientar o formato do identificador e informar claramente quando não houver correspondência ou houver mais de uma. |
+| 2. | Gerar resultado |  | Informar que o resultado gerado é complementar e não substitui a avaliação médica. |
 
 **Verificação do HTA:**
 
@@ -78,26 +73,23 @@ O objetivo é avaliar uma tomografia renal e decidir como prosseguir diante de p
 
 ### Goal
 
-`G0: Fazer upload das imagens`
+`G0: Buscar paciente`
 
 ### Métodos, operadores e regras de seleção
 
-- **Method M1:** Selecionar localmente
+- **Method M1:** Informar nome ou CPF
   - Operators: 
-    - OP1: Clicar no botão de upload
-    - OP2: Aguardar abertura do explorador de arquivos
-    - OP3: Navegar até o diretório desejado
-    - OP4: Selecionar as imagens
-    - OP5: Confirmar a seleção
-    - OP6: Aguardar o carregamento
-- **Method M2:** Arrastar imagens
+    - OP1: Clicar no campo de busca.
+    - OP2: Digitar nome ou CPF do paciente.
+    - OP3: Selecionar o paciente desejado.
+    - OP4: Confirmar a identificação do paciente.
+- **Method M2:** Informar prontuário
   - Operators: 
-    - OP1: Localizar as imagens no computador
-    - OP2: Selecionar os arquivos
-    - OP3: Arrastar os arquivos até a área de upload
-    - OP4: Soltar os arquivos na área indicada
-    - OP5: Aguardar o carregamento
-- **Selection Rule SR1:** usar M1 quando preferência do usuário for utilizar o explorador de arquivos; usar M2 quando preferência do usuário for utilizar a funcionalidade de arrastar e soltar.
+    - OP1: Clicar no campo de busca.
+    - OP2: Digitar número do prontuário.
+    - OP3: Selecionar o paciente desejado.
+    - OP4: Confirmar a identificação do paciente.
+- **Selection Rule SR1:** usar M1 quando preferência do usuário informar nome ou CPF; usar M2 quando preferência do usuário for informar número de prontuário.
 
 > Não chame qualquer passo de “método”. Em GOMS, métodos são sequências alternativas capazes de atingir uma meta; regras de seleção explicam quando escolher entre eles.
 
@@ -109,7 +101,7 @@ O objetivo é avaliar uma tomografia renal e decidir como prosseguir diante de p
 
 ### Descrição
 
-O diagrama representa uma proposta de fluxo em que Mario Russano faz login, informa usuário e senha e tem as credenciais validadas antes de acessar a avaliação. Em seguida, seleciona as imagens por upload ou seleciona um paciente; no upload, pode selecionar os arquivos localmente ou arrastá-los, e na busca do paciente pode informar nome e CPF ou número de prontuário. Após selecionar as imagens, interpreta o resultado da avaliação. Assim, a tarefa começa com o acesso ao sistema e termina com a interpretação desse resultado; o diagrama não detalha a inspeção das imagens nem como o profissional decide os próximos passos clínicos. O fluxo, as alternativas e o papel do resultado são propostas ainda a validar com profissionais.
+O diagrama representa uma proposta de fluxo em que Mario Russano seleciona um paciente, informando nome/CPF ou número de prontuário. Após selecionar o paciente, as imagens passam pelo modelo que gera um resultado, e Mario interpreta sua avaliação. Assim, a tarefa começa com a escolha do paciente e termina com a interpretação desse resultado; o diagrama não detalha a inspeção das imagens nem como o profissional decide os próximos passos clínicos. O fluxo, as alternativas e o papel do resultado são propostas ainda a validar com profissionais.
 
 ### Diagrama
 
@@ -119,8 +111,7 @@ O diagrama representa uma proposta de fluxo em que Mario Russano faz login, info
 
 | Operador/relação | Significado no diagrama | Exemplo no modelo |
 |---|---|---|
-| `[]>>` — ativação com passagem de informação | A segunda tarefa ocorre somente após a primeira, e a informação da primeira tarefa é passada para a segunda | Mário Russano faz o login para acessar o sistema, e só após estar autenticado pode ter acesso à funcionalidade de avaliar um conjunto de imagens de uma tomografia computadorizada. |
-| `>>` — ativação | A segunda tarefa ocorre somente após a primeira, e a informação da primeira tarefa é passada para a segunda | Uma vez que Mario Russano está autenticado, ele inicia o processo de avaliação. |
+| `[]>>` — ativação com passagem de informação | A segunda tarefa ocorre somente após a primeira, e a informação da primeira tarefa é passada para a segunda | Mário Russano faz seleciona um paciente, e só após o modelo é acionado para predição, utilizando as imagens deste paciente. |
 | `[]` — escolha | Duas opções habilitadas para alcançar a mesma meta, mas uma vez que uma é escolhida, a outra é desabilitada. | Mario Russano escolhe o conjunto de um paciente específico a partir de uma busca por nome e cpf deste paciente. |
 
 Identifique, quando aplicável, tarefas de usuário, sistema, interação e tarefas abstratas. Verifique se concorrência, escolha, habilitação, desabilitação e repetição estão representadas corretamente segundo a notação adotada em aula.
