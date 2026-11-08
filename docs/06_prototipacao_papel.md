@@ -10,9 +10,9 @@ Externalizar rapidamente ideias de interação em baixa fidelidade para explorar
 
 ## 1. Escopo do protótipo
 
-**Personas:** {{...}}  
-**Cenários/tarefas cobertos:** {{C01/T01...}}  
-**Objetivos principais:** {{...}}
+**Personas:** P01  
+**Cenários/tarefas cobertos:** C01/T01 
+**Objetivos principais:** Avaliar tomografia
 
 ## 1.1 Possíveis famílias de interface
 
@@ -35,7 +35,7 @@ Escolha apenas o que for coerente com tarefas e cenários. Para TCCs técnicos, 
 
 | Fluxo | Tarefa/objetivo | Por que foi priorizado |
 |---|---|---|
-| PF01 | {{...}} | {{...}} |
+| PF01 | Avaliar tomografia | Fluxo compõe a tarefa principal. |
 
 ## 3. Telas e estados
 
@@ -43,7 +43,27 @@ Escolha apenas o que for coerente com tarefas e cenários. Para TCCs técnicos, 
 - Indique controles que mudam o estado.
 - Mostre pelo menos caminhos principais e estados de erro/retorno relevantes.
 
-![Protótipo](../assets/06_prototipos/prototipo_fluxo_01.svg)
+### P01 - Tela inicial
+![Protótipo - P1](../assets/06_prototipos/P01.svg)
+
+### P02 - Tela buscar paciente
+![Protótipo - P2](../assets/06_prototipos/P02.svg)
+
+### P03 - Tela 'Paciente não encontrado'
+![Protótipo - P3](../assets/06_prototipos/P03.svg)
+
+### P04 - Tela 'Paciente encontrado'
+![Protótipo - P4](../assets/06_prototipos/P04.svg)
+
+### P05 - Tela informações paciente
+![Protótipo - P5](../assets/06_prototipos/P05.svg)
+
+### P06 - Tela resultado análise
+![Protótipo - P6.1](../assets/06_prototipos/P06-1.svg)
+
+![Protótipo - P6.2](../assets/06_prototipos/P06-2.svg)
+
+
 
 ## 4. Simulação / walkthrough
 
