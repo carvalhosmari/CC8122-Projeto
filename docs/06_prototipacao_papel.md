@@ -1,7 +1,7 @@
 # Entrega 6 — Prototipação em papel
 
-**Data:** 07/11/2026  
-**Status:** 🟨 em andamento  
+**Data:** 08/11/2026  
+**Status:** 🟩 concluída  
 **Responsabilidade:** 1 solução integrada por equipe
 
 ## Objetivo da atividade
@@ -44,24 +44,44 @@ Escolha apenas o que for coerente com tarefas e cenários. Para TCCs técnicos, 
 - Mostre pelo menos caminhos principais e estados de erro/retorno relevantes.
 
 ### P01 - Tela inicial
-![Protótipo - P1](../assets/06_prototipos/P01.svg)
+![Protótipo - P1](../assets/06_prototipos/P01.png)
+
+- Controles que mudam o estado:
+  - Botão "Analisar tomografia": redireciona para P2.
 
 ### P02 - Tela buscar paciente
-![Protótipo - P2](../assets/06_prototipos/P02.svg)
+![Protótipo - P2](../assets/06_prototipos/P02.png)
+
+- Controles que mudam o estado:
+  - Botão "Buscar": ao confirmar a busca, gera estado de carregamento. Se o paciente existir, vai para P04; se não existir, vai para P03.
 
 ### P03 - Tela 'Paciente não encontrado'
-![Protótipo - P3](../assets/06_prototipos/P03.svg)
+![Protótipo - P3](../assets/06_prototipos/P03.png)
+
+- Controles que mudam o estado:
+  - Botão "Buscar": ao confirmar a busca, gera estado de carregamento. Se o paciente existir, vai para P04; se não existir, se mantem em P03.
 
 ### P04 - Tela 'Paciente encontrado'
-![Protótipo - P4](../assets/06_prototipos/P04.svg)
+![Protótipo - P4](../assets/06_prototipos/P04.png)
+
+- Controles que mudam o estado:
+  - Clicar no nome do paciente: habilita botão "Confirmar e analisar".
+  - Botão "Confirmar e analisar": vai para P05.
 
 ### P05 - Tela informações paciente
-![Protótipo - P5](../assets/06_prototipos/P05.svg)
+![Protótipo - P5](../assets/06_prototipos/P05.png)
+
+- Controles que mudam o estado:
+  - Botão "Confirmar e analisar": dispara o processamento e transfere para P06.
+  - Botão "Voltar": retorna para P04 (tela de busca) para corrigir ou alterar a seleção.
 
 ### P06 - Tela resultado análise
-![Protótipo - P6.1](../assets/06_prototipos/P06-1.svg)
+![Protótipo - P6.1](../assets/06_prototipos/P06-1.png)
 
-![Protótipo - P6.2](../assets/06_prototipos/P06-2.svg)
+![Protótipo - P6.2](../assets/06_prototipos/P06-2.png)
+
+- Controles que mudam o estado:
+  - Botão "Fechar": retorna para P01.
 
 
 
@@ -71,20 +91,22 @@ Realize uma simulação com uma pessoa que não participou da elaboração dessa
 
 | Observação | Tela/ação | Evidência | Consequência para o design |
 |---|---|---|---|
-| {{...}} | {{...}} | {{...}} | {{...}} |
+| **visibilidade do status do sistema** - durante a análise não há indicador de progresso, spinner ou bloqueio da interface | Confirmação > processamento | Tela tem "delay" até resultado ser exibido | Adicionar indicador de progresso perceptível (spinner, skeleton no card de resultado ou overlay modal "Analisando…"). |
+| **ajuda e documentação** - não há ajuda contextual ou texto explicando o que o modelo faz ou o que significam os rótulos de confiança; o disclaimer existe só no laudo | Card de resultado | Informação aparece apenas dentro do laudo; nada explica "confiança" ou o GradCAM para quem nunca usou | Adicionar microcopy no card de resultado (ex.: tooltip em "Confiança", legenda "vermelho = região que mais influenciou a decisão") - interpretabilidade sem explicação é ruído visual |
 
 ## 5. Alterações após a simulação
 
 | Antes | Problema | Depois | Justificativa |
 |---|---|---|---|
-| {{...}} | {{...}} | {{...}} | {{...}} |
+| Tela de confirmação sem feedback visual durante o processamento | O usuário não sabe se a análise está em andamento ou se o sistema está travado; isso gera dúvida e hesitação no momento crítico da tarefa | Adicionar informações de carregamento (ex: mensagem “Analisando tomografia…”) e bloqueio temporário de ações para deixar o status explícito | O feedback de progresso reduz incerteza, melhora a percepção de continuidade do sistema e evita que o usuário interprete a espera como falha. |
+| Card de resultado com indicadores sem explicação contextual | O usuário não entende o que significa “confiança” e as regiões destacadas, especialmente sem experiência prévia com GradCAM; o texto no laudo é insuficiente e esconde a explicação. | Incluir informações no próprio card (ex: tooltips e legenda simples como “vermelho = área que mais influenciou a decisão”) | A interpretabilidade precisa ser compreendida no momento da leitura do resultado; explicações curtas e próximas aos elementos ajudam a transformar sinal visual em informação útil. |
 
 ## Checklist
 
-- [ ] O protótipo cobre tarefas relevantes da Entrega 5.
-- [ ] Cada tela/estado pode ser justificado por uma tarefa, decisão ou informação necessária.
-- [ ] O projeto não criou dashboard/CRUD/login apenas para parecer “completo”.
-- [ ] Telas/estados estão numerados e navegáveis na documentação.
-- [ ] Há pelo menos uma simulação/walkthrough documentado.
-- [ ] Críticas não foram apenas listadas: geraram decisão de revisão.
+- [x] O protótipo cobre tarefas relevantes da Entrega 5.
+- [x] Cada tela/estado pode ser justificado por uma tarefa, decisão ou informação necessária.
+- [x] O projeto não criou dashboard/CRUD/login apenas para parecer “completo”.
+- [x] Telas/estados estão numerados e navegáveis na documentação.
+- [x] Há pelo menos uma simulação/walkthrough documentado.
+- [x] Críticas não foram apenas listadas: geraram decisão de revisão.
 - [ ] O protótipo continua em baixa fidelidade; detalhes visuais não mascaram problemas de fluxo.
