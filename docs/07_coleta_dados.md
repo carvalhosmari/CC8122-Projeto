@@ -1,7 +1,7 @@
 # Entrega 7 — Coleta de dados, necessidades e aspectos éticos
 
-**Data:** {{dd/mm/aaaa}}  
-**Status:** ⬜ não iniciada
+**Data:** 14/11/2026  
+**Status:** 🟨 em andamento
 
 ## Objetivo da atividade
 
@@ -38,9 +38,9 @@ Antes de decidir “que dados coletar”, retome os itens `[H]` e `[?]` da Entre
 
 > **Responsabilidade:** solução individual por integrante.
 
-### A01 — {{autor}}
+### A01 — Mariane S. Carvalho
 
-**Autor(a):** {{nome — matrícula}}
+**Autor(a):** Mariane S. Carvalho RA: 22.123.105-3
 
 #### Que dados coletar?
 
