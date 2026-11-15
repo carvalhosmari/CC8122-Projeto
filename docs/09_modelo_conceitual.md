@@ -1,7 +1,7 @@
 # Entrega 9 — Modelo conceitual e design centrado na comunicação
 
-**Data:** {{dd/mm/aaaa}}  
-**Status:** ⬜ não iniciada  
+**Data:** 15/11/2026  
+**Status:** 🟨 em andamento  
 **Responsabilidade:** soluções individuais, com consolidação da equipe para mapa de objetivos e esquema de signos.
 
 ## Objetivo da atividade
@@ -27,10 +27,10 @@ Dashboards, relatórios, filtros e CRUDs devem aparecer no modelo conceitual por
 
 Para cada cenário de problema, produza uma versão em que a solução já pode ser descrita. **Destaque claramente o texto alterado** em relação ao cenário original.
 
-### CI01 — {{título}}
+### CI01 — Dúvida na avaliação de possível alteração renal
 
-**Autor(a):** {{nome — matrícula}}  
-**Origem:** cenário problema {{C01}}
+**Autor(a):** Mariane S. Carvalho — RA: 22.123.105-3  
+**Origem:** cenário problema C01 — Dúvida na avaliação de possível alteração renal
 
 {{cenário de interação com alterações marcadas}}
 
