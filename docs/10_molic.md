@@ -1,7 +1,7 @@
 # Entrega 10 — MoLIC
 
-**Data:** {{dd/mm/aaaa}}  
-**Status:** ⬜ não iniciada  
+**Data:** 15/11/2026  
+**Status:** 🟨 em andamento  
 **Responsabilidade:** 1 solução completa por integrante
 
 ## Objetivo da atividade
@@ -25,7 +25,7 @@ Modele também rupturas plausíveis: entrada inválida, falha de processamento, 
 
 ## M01 — {{nome do cenário/objetivo}}
 
-**Autor(a):** {{nome — matrícula}}  
+**Autor(a):** Mariane S. Carvalho — RA: 22.123.105-3  
 **Cenário de interação de origem:** {{CI01}}  
 **Objetivo(s):** {{O01}}  
 **Tarefa(s) relacionada(s):** {{T01}}  
