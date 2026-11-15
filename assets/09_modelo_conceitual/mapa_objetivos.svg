@@ -1,5 +1,76 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="360" viewBox="0 0 960 360">
-<rect width="100%" height="100%" fill="#f6f8fa" stroke="#8c959f" stroke-width="4"/>
-<text x="480" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#24292f">PLACEHOLDER DE ARTEFATO</text>
-<text x="480" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#57606a">Substitua este arquivo pela evidência real da equipe.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1220" height="550" viewBox="0 0 1220 550" role="img" aria-labelledby="title desc">
+  <title id="title">Mapa de objetivos de CI01</title>
+  <desc id="desc">No topo, O01 e o objetivo principal do nefrologista. Abaixo, da esquerda para a direita, derivam O02 localizar e confirmar o caso, O03 consultar indicacao, O04 interpretar com imagens e dados clinicos e O05 decidir como prosseguir. Cada objetivo instrumental aponta diretamente para O01. O02 tambem instrumenta O04 indiretamente, por uma seta tracejada.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="10" refX="10" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0 0 L11 5 L0 10 Z" fill="#313b3a"/>
+    </marker>
+  </defs>
+  <rect width="1220" height="550" fill="#f8f8f5"/>
+  <text x="25" y="43" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#313b3a">CI01 / P01 / T01</text>
+  <text x="25" y="69" font-family="Arial, sans-serif" font-size="15" fill="#505958">Mapa de objetivos do nefrologista Mario Russano</text>
+
+  <!-- Objetivo final: contorno continuo e compartimento do papel. -->
+  <rect x="420" y="25" width="380" height="108" rx="22" fill="#ffffff" stroke="#313b3a" stroke-width="2.5"/>
+  <path d="M527 25 V133" stroke="#313b3a" stroke-width="2.5"/>
+  <text x="473" y="73" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#313b3a">m&#233;dico</text>
+  <text x="473" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#313b3a">nefrologista</text>
+  <text x="544" y="59" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#313b3a">O01 / objetivo final</text>
+  <text x="544" y="85" font-family="Arial, sans-serif" font-size="16" fill="#313b3a">Avaliar tomografia renal</text>
+  <text x="544" y="108" font-family="Arial, sans-serif" font-size="16" fill="#313b3a">e decidir como prosseguir</text>
+
+  <!-- Objetivos instrumentais: contorno tracejado, como na legenda. -->
+  <text x="25" y="215" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#313b3a">O01 se desdobra em:</text>
+  <rect x="25" y="225" width="270" height="125" rx="21" fill="#ffffff" stroke="#313b3a" stroke-width="2.5" stroke-dasharray="10 7"/>
+  <path d="M127 225 V350" stroke="#313b3a" stroke-width="2.5" stroke-dasharray="10 7"/>
+  <text x="76" y="278" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#313b3a">m&#233;dico</text>
+  <text x="76" y="301" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#313b3a">nefrologista</text>
+  <text x="144" y="253" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#313b3a">O02</text>
+  <text x="144" y="282" font-family="Arial, sans-serif" font-size="16" fill="#313b3a">Localizar e confirmar</text>
+  <text x="144" y="306" font-family="Arial, sans-serif" font-size="16" fill="#313b3a">paciente e exame</text>
+  <text x="144" y="330" font-family="Arial, sans-serif" font-size="16" fill="#313b3a">vinculado</text>
+
+  <rect x="325" y="225" width="270" height="125" rx="21" fill="#ffffff" stroke="#313b3a" stroke-width="2.5" stroke-dasharray="10 7"/>
+  <path d="M427 225 V350" stroke="#313b3a" stroke-width="2.5" stroke-dasharray="10 7"/>
+  <text x="376" y="278" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#313b3a">m&#233;dico</text>
+  <text x="376" y="301" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#313b3a">nefrologista</text>
+  <text x="444" y="253" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#313b3a">O03</text>
+  <text x="444" y="282" font-family="Arial, sans-serif" font-size="16" fill="#313b3a">Consultar indica&#231;&#227;o</text>
+  <text x="444" y="306" font-family="Arial, sans-serif" font-size="16" fill="#313b3a">automatizada do</text>
+  <text x="444" y="330" font-family="Arial, sans-serif" font-size="16" fill="#313b3a">exame</text>
+
+  <rect x="625" y="225" width="270" height="125" rx="21" fill="#ffffff" stroke="#313b3a" stroke-width="2.5" stroke-dasharray="10 7"/>
+  <path d="M727 225 V350" stroke="#313b3a" stroke-width="2.5" stroke-dasharray="10 7"/>
+  <text x="676" y="278" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#313b3a">m&#233;dico</text>
+  <text x="676" y="301" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#313b3a">nefrologista</text>
+  <text x="744" y="253" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#313b3a">O04</text>
+  <text x="744" y="282" font-family="Arial, sans-serif" font-size="16" fill="#313b3a">Interpretar indica&#231;&#227;o</text>
+  <text x="744" y="306" font-family="Arial, sans-serif" font-size="16" fill="#313b3a">com imagens e</text>
+  <text x="744" y="330" font-family="Arial, sans-serif" font-size="16" fill="#313b3a">dados cl&#237;nicos</text>
+
+  <rect x="925" y="225" width="270" height="125" rx="21" fill="#ffffff" stroke="#313b3a" stroke-width="2.5" stroke-dasharray="10 7"/>
+  <path d="M1027 225 V350" stroke="#313b3a" stroke-width="2.5" stroke-dasharray="10 7"/>
+  <text x="976" y="278" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#313b3a">m&#233;dico</text>
+  <text x="976" y="301" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#313b3a">nefrologista</text>
+  <text x="1044" y="253" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#313b3a">O05</text>
+  <text x="1044" y="282" font-family="Arial, sans-serif" font-size="16" fill="#313b3a">Decidir pr&#243;ximos</text>
+  <text x="1044" y="306" font-family="Arial, sans-serif" font-size="16" fill="#313b3a">passos diante de</text>
+  <text x="1044" y="330" font-family="Arial, sans-serif" font-size="16" fill="#313b3a">achado ou d&#250;vida</text>
+
+  <!-- A seta aponta para o objetivo instrumentado, nao para a proxima etapa. -->
+  <path d="M160 222 V177 H445 V136" fill="none" stroke="#313b3a" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <path d="M460 222 V193 H530 V136" fill="none" stroke="#313b3a" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <path d="M760 222 V193 H690 V136" fill="none" stroke="#313b3a" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <path d="M1060 222 V177 H775 V136" fill="none" stroke="#313b3a" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <path d="M160 353 V390 H760 V353" fill="none" stroke="#313b3a" stroke-width="2.5" stroke-dasharray="10 7" marker-end="url(#arrow)"/>
+
+  <line x1="30" y1="443" x2="90" y2="443" stroke="#313b3a" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="111" y="449" font-family="Arial, sans-serif" font-size="15" fill="#313b3a">instrumenta diretamente</text>
+  <line x1="370" y1="443" x2="430" y2="443" stroke="#313b3a" stroke-width="2.5" stroke-dasharray="10 7" marker-end="url(#arrow)"/>
+  <text x="451" y="449" font-family="Arial, sans-serif" font-size="15" fill="#313b3a">instrumenta indiretamente</text>
+  <rect x="30" y="472" width="48" height="24" rx="8" fill="#ffffff" stroke="#313b3a" stroke-width="2"/>
+  <text x="95" y="490" font-family="Arial, sans-serif" font-size="15" fill="#313b3a">objetivo final</text>
+  <rect x="270" y="472" width="48" height="24" rx="8" fill="#ffffff" stroke="#313b3a" stroke-width="2" stroke-dasharray="7 5"/>
+  <text x="335" y="490" font-family="Arial, sans-serif" font-size="15" fill="#313b3a">objetivo instrumental</text>
+  <text x="30" y="525" font-family="Arial, sans-serif" font-size="14" fill="#505958">Papel: m&#233;dico nefrologista (P01). O05 &#233; decis&#227;o cl&#237;nica fora do prot&#243;tipo.</text>
 </svg>
